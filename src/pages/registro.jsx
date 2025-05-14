@@ -9,7 +9,7 @@ function Registro() {
 
        <div className='cuadro-registro'>
          <div className='encabezado'>
-             <h1>REGISTRARTE</h1>
+             <h1>REGISTRATE</h1>
          </div>
 
          <form>
