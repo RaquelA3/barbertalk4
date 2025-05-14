@@ -1,0 +1,43 @@
+.container{
+    background-image: url('/public/img/Fondo-Encabezado.png');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    position: relative;
+    
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    
+    /* Estilo para las imagenes de fondo */
+    width: 100vw;
+    height: 100vh;
+    display: flex;  
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.subtitulos{
+    max-width: 600px;
+}
+
+.subtitulos h2{
+    color: #E6A749;
+    font-size: 2.5rem;
+    font-weight: 100;
+    margin-bottom: 0.5rem;
+}
+
+.subtitulos p{
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.boton-agendarSub{
+    background-color: #E6A749;
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    font-weight: bold;
+    text-decoration: none;
+}

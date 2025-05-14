@@ -1,0 +1,57 @@
+.navbar-encabezado {
+    width: 96%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 2rem;
+    align-items: center;
+    background-color: black;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    font-family: 'Roboto';
+    font-size: 12px;
+    font-weight: 200;
+}
+
+
+.logo{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.logo img{
+    width: 200px;
+}
+
+.nav-links{
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+}
+
+.nav-links a{
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.boton-agendar{
+    background-color: #E6A749;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+/* Fuente personalizada */
+@font-face {
+  font-family: "Roboto";
+  src: url(fonts/RobotoSlab-Black.ttf) format("truetype");
+  font-weight: 200;
+}
