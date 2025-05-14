@@ -5,15 +5,19 @@ function Navbar() {
   return (
      <nav className='navbar-encabezado'>
         <div className='logo'>
-             <img src='/public/img/Encabezado.png' alt='Logo encabezado'></img>
+             <img src='/img/Encabezado.png' alt='Logo encabezado'></img>
         </div>
 
         <ul className='nav-links'>
-            <li><a href='/registro'>REGISTRO</a></li>
+            <li><a href='/registro'>REGISTRARSE</a></li>
             <li><a href='/iniciosesion'>INICIAR SESIÓN</a></li>
             <li><a href='/preguntas'>PREGUNTAS</a></li>
             <li><a href='/contacto'>CONTACTO</a></li>
-            <li><a className='boton-agendar' href='/agendarCita'>AGENDAR <span>📅</span></a></li>
+            <li><a className='boton-agendar' href='/agendarCita'>AGENDAR </a></li>
+            
+            <a href='/agendarCita'><img src="/img/calendario.png" alt="Logo calendario" className="calendario" /></a>
+            
+
         </ul>
      </nav>
   );
