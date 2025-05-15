@@ -19,6 +19,7 @@
 .cuadro-registro{
     background-color: #4B3C3C;
     width: 35%;
+    height: 75%;
     border-radius: 3%;
     margin-left: 60%;
     margin-top: 5%;
@@ -29,6 +30,7 @@ h1{
     align-items: center;
     text-align: center;
     font-size: 30px;
+    margin-left: -5%;
 }
 
 .grid-formulario {
