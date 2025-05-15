@@ -50,6 +50,7 @@ h1{
     border: 1px solid;
     border-radius: 15px;
     background-color: #e8f5e9;
+    color: black;
 }
 
 .grid-formulario select{

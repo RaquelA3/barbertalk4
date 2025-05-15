@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+.container3 {
+    background-image: url('/img/FondoIS.png');
+    background-size: cover;
+    background-position: center 25%; 
+    color: white;
+    position: relative;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.cuadro-inicioS{
+    background-color: #4B3C3C;
+    width: 30%;
+    border-radius: 3%;
+    margin-left: 5%;
+    margin-top: 1%;
+}
+
+h1{
+    font-family: 'Roboto';
+    align-items: center;
+    text-align: center;
+    font-size: 30px;
+}
+
+h2{
+    font-family: 'Roboto';
+    align-items: center;
+    text-align: center;
+    font-size: 30px;
+}
+
+.grid-formulario {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-left: 5%;
+  margin-right: 5%;
+  width: 90%;
+}
+
+.campo-formulario {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.grid-formulario input {
+  padding: 10px;
+  border: 1px solid;
+  border-radius: 15px;
+  background-color: #e8f5e9;
+}
+
+
+.boton-inicioS {
+    display: block;
+    width: 90%; /* ajustado para que no sobresalga */
+    padding: 10px;
+    background-color: #E6A749;
+    color: white;
+    border: none;
+    border-radius: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 20px auto 10px auto; /* centrado horizontalmente */
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.boton-inicioS:hover{
+    background-color: black;
+    color: #E6A749;
+}
+
+
+.no-cuenta {
+    text-align: center;
+    margin-top: 5px; /* corregido: más natural */
+    width: 100%;
+}
+
+.no-cuenta a {
+    color: #838282;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.no-cuenta a:hover{
+    color: white;
+}
+
