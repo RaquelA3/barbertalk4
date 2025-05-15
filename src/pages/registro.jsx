@@ -78,7 +78,7 @@ function Registro() {
           <div className="grid-formulario">
             <div className='campo-formulario'>
               <label htmlFor='nombre'>Nombre:</label>
-              <input type='text' id='nombre' name='nombre' onChange={handleChange} required />
+              <input type='text' id='nombre' name='nombre' onChange={handleChange} required autoFocus />
             </div>
 
             <div className='campo-formulario'>
