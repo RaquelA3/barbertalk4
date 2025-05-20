@@ -3,7 +3,7 @@ import Navbar from '../components/Navbar';
 import React, { useState, useEffect } from 'react';
 
 //Componente de inicio de sesión
-function iniciosesion() {
+function Iniciosesion() {
   const [form, setForm] = useState({ usuario: '', contraseña: '' });
   const [csrfToken, setCsrfToken] = useState('');
 
@@ -86,4 +86,4 @@ function iniciosesion() {
   );
 }
 
-export default iniciosesion;
+export default Iniciosesion;
