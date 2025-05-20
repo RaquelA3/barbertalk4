@@ -46,7 +46,7 @@ function Registro() {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          'X-CSRF-Token': csrfToken, // enviar token CSRF
+          'csrf-token': csrfToken,
         },
         credentials: 'include',  // enviar cookies
         body: JSON.stringify(form)
