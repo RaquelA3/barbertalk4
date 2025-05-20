@@ -3,9 +3,5 @@ import react from '@vitejs/plugin-react'
 
 export default defineConfig({
   plugins: [react()],
-  preview: {
-    host: '0.0.0.0',
-    port: 4173,
-    allowedHosts: ['barbertalk4-5.onrender.com'],
-  },
+  // No necesitas preview ni allowedHosts para producción estática
 })
