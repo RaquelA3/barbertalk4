@@ -26,11 +26,11 @@
 
 .subtitulos h2{
     color: #E6A749;
-    font-family: sans-serif;
+    font-family: 'Roboto';
     font-size: 40px;
-    font-weight: 100;
+    font-weight: 400;
     margin-bottom: 0.5rem;
-    margin-left: -140%;
+    margin-left: -125%;
     margin-top: -15%;
 }
 
@@ -68,3 +68,145 @@
 }
 
 
+
+/* Estas son las medidas de la version movil del sitio web */
+@media (max-width: 768px) {
+    .container {
+        background-image: url('/img/Fondo-Encabezado.png');
+        background-size: cover;
+        background-position: center;
+        color: white;
+        position: relative;
+        background-repeat: no-repeat;
+        background-attachment: scroll; 
+        width: 100vw;
+        height: 100vh;
+        display: flex;  
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .subtitulos {
+        max-width: 90%;
+        margin-top: 15%;
+        text-align: center;
+    }
+
+    .subtitulos h2 {
+        color: #E6A749;
+        font-family: 'Roboto';
+        font-size: 28px;
+        font-weight: 400;
+        margin-bottom: 0.5rem;
+        margin-left: 0;
+        margin-top: 0;
+    }
+
+    .subtitulos p {
+        font-size: 18px;
+        margin-left: 0;
+        margin-top: 0.5rem;
+        width: 100%;
+        font-family: 'Roboto';
+        font-weight: 700;
+    }
+
+    .boton-agendarSub {
+        background-color: #E6A749;
+        color: black;
+        padding: 0.75rem 2rem;
+        border-radius: 8px;
+        text-decoration: none;
+        margin-left: 0;
+        font-weight: bold;
+        font-family: 'Roboto';
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        margin-top: 1rem;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Contenedor de la sección blanca */
+/* .servicios-container {
+    background-color: #f9f9f9;
+    width: 100%;
+    padding: 3rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    position: relative; 
+    top: 54%;
+    color: black;
+}
+
+.titulo-S {
+    font-size: 2rem;
+    color: #333;
+}
+
+.servicios-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+    width: 90%;
+    max-width: 1200px;
+}
+
+.servicio-card {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+ */
