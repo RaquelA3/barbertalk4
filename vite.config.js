@@ -6,6 +6,6 @@ export default defineConfig({
   preview: {
     host: '0.0.0.0',
     port: 4173,
-    allowedHosts: ['.onrender.com'],
+    allowedHosts: ['barbertalk4-5.onrender.com'],
   },
 })
