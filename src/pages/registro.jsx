@@ -21,7 +21,7 @@ function Registro() {
   const [csrfToken, setCsrfToken] = useState('');
 
   useEffect(() => {
-    fetch('http://localhost:3000/api/csrf-token', {
+    fetch('https://barbertalk-back.onrender.com/api/csrf-token', {
       credentials: 'include',  // importante para enviar y recibir cookies
     })
       .then(res => res.json())
@@ -42,7 +42,7 @@ function Registro() {
     }
 
     try {
-      const res = await fetch('http://localhost:3000/registro', {
+      const res = await fetch('https://barbertalk-back.onrender.com/registro', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
