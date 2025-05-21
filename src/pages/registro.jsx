@@ -25,7 +25,8 @@ function Registro() {
       credentials: 'include',  // importante para enviar y recibir cookies
     })
       .then(res => res.json())
-      .then(data => setCsrfToken(data.csrfToken))
+      .then(data => 
+        setCsrfToken(data.csrfToken))
       .catch(err => console.error('Error al obtener token CSRF:', err));
   }, []);
 
@@ -46,7 +47,7 @@ function Registro() {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          'csrf-token': csrfToken,
+          'X-CSRF-Token': csrfToken,
         },
         credentials: 'include',  // enviar cookies
         body: JSON.stringify(form)
