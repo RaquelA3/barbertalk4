@@ -116,3 +116,39 @@ h2 {
     color: white;
 }
 
+/* Acomode el css para version celuar */
+@media (max-width: 768px) {
+  .cuadro-inicioS {
+    width: 85%;
+    height: 43%;
+    margin-left: 0;
+    margin-top: 10%;
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 28px;
+    margin-bottom: 10px;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+
+  .grid-formulario2 {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    gap: 12px;
+  }
+
+  .boton-inicioS {
+    width: 100%;
+    font-size: 16px;
+  }
+
+  .no-cuenta {
+    margin-top: -8%;
+    font-size: 12px;
+  }
+}
