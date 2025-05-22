@@ -1,6 +1,7 @@
 import '../styles/iniciosesion.css';
 import Navbar from '../components/Navbar';
 import React, { useState, useEffect } from 'react';
+import { Navigate } from 'react-router-dom';
 
 //Componente de inicio de sesión
 function Iniciosesion() {
@@ -46,6 +47,7 @@ function Iniciosesion() {
       if (res.ok) {
         alert(data.mensaje || 'Inicio de sesión exitoso');
         //Enviar o guardar sesion aquí
+        Navigate('/agendar', {replace: true});
       } else {
         alert(data.mensaje || 'Error al iniciar sesión');
       }
@@ -75,7 +77,7 @@ function Iniciosesion() {
               <input type='password' id='contraseña' name='contraseña' value={form.contraseña} onChange={handleChange} required />
             </div>
           </div>
-          <button type='submit' className='boton-inicioS' href= '/agendarC'>COMENZAR</button>
+          <button type='submit' className='boton-inicioS' href= '/agendar'>COMENZAR</button>
           <br />
           <div className='no-cuenta'>
             <a href='/registro'>¿Aún no tienes cuenta?</a>
