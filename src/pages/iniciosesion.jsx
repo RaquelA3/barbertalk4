@@ -1,12 +1,13 @@
 import '../styles/iniciosesion.css';
 import Navbar from '../components/Navbar';
 import React, { useState, useEffect } from 'react';
-import { Navigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 //Componente de inicio de sesión
 function Iniciosesion() {
   const [form, setForm] = useState({ usuario: '', contraseña: '' });
   const [csrfToken, setCsrfToken] = useState('');
+  const navigate = useNavigate();
 
   //Obtener el token CSRF al cargar el componente
   useEffect(() => {
@@ -47,7 +48,7 @@ function Iniciosesion() {
       if (res.ok) {
         alert(data.mensaje || 'Inicio de sesión exitoso');
         //Enviar o guardar sesion aquí
-        Navigate('/agendar', {replace: true});
+        navigate('/inicio');
       } else {
         alert(data.mensaje || 'Error al iniciar sesión');
       }
