@@ -1,6 +1,7 @@
 import '../styles/registro.css';
 import Navbar from '../components/Navbar'; 
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 function Registro() {
   const [form, setForm] = useState({
@@ -19,6 +20,7 @@ function Registro() {
   });
 
   const [csrfToken, setCsrfToken] = useState('');
+  const navigate = useNavigate();
 
   useEffect(() => {
     fetch('https://barbertalk-back.onrender.com/api/csrf-token', {
@@ -61,6 +63,7 @@ function Registro() {
       if (res.ok) {
         alert(data.mensaje || 'Registro exitoso');
         // aquí podrías redirigir si quieres
+        navigate('/agendar');
       } else {
         alert(data.error || 'Error en el registro');
       }

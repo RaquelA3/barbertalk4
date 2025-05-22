@@ -48,7 +48,7 @@ function Iniciosesion() {
       if (res.ok) {
         alert(data.mensaje || 'Inicio de sesión exitoso');
         //Enviar o guardar sesion aquí
-        navigate('/inicio');
+        navigate('/agendar');
       } else {
         alert(data.error || 'Error al iniciar sesión');
       }
