@@ -9,7 +9,7 @@ function Iniciosesion() {
 
   //Obtener el token CSRF al cargar el componente
   useEffect(() => {
-    fetch('http://localhost:3000/api/csrf-token', { 
+    fetch('https://barbertalk-back.onrender.com/api/csrf-token', { 
       credentials: 'include', 
     })
       .then(res => res.json())
@@ -31,7 +31,7 @@ function Iniciosesion() {
     e.preventDefault();
 
     try { //Enviar el formulario al servidor
-      const res = await fetch('http://localhost:3000/login', {
+      const res = await fetch('https://barbertalk-back.onrender.com/login', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
