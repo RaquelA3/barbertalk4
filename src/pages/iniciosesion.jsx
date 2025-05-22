@@ -75,7 +75,7 @@ function Iniciosesion() {
               <input type='password' id='contraseña' name='contraseña' value={form.contraseña} onChange={handleChange} required />
             </div>
           </div>
-          <button type='submit' className='boton-inicioS'>COMENZAR</button>
+          <button type='submit' className='boton-inicioS' href= '/agendarC'>COMENZAR</button>
           <br />
           <div className='no-cuenta'>
             <a href='/registro'>¿Aún no tienes cuenta?</a>
