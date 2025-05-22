@@ -108,3 +108,37 @@ h1{
 }
 
 
+/* Para version celular */
+@media (max-width: 768px) {
+    .cuadro-registro {
+        width: 85%;
+        height: 128%;
+        margin-left: 0;
+        margin-top: 115%;
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 24px;
+        margin-left: 0;
+        margin-top: 0%;
+    }
+
+    .grid-formulario {
+        grid-template-columns: 1fr; /* Una sola columna */
+        gap: 15px;
+        margin: 0;
+    }
+
+    .boton-registrar {
+        margin-left: 0;
+        width: 100%;
+        font-size: 16px;
+    }
+
+    .cuenta {
+        margin-left: 0;
+        font-size: 12px;
+        margin-top: -12%;
+    }
+}
