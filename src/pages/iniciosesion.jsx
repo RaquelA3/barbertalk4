@@ -55,7 +55,7 @@ function Iniciosesion() {
     }
   };
 
-  //Formulario de inicio de sesion
+  //Formulario de inicio de sesiones
   return (
     <div className='container3'>
       <Navbar />
