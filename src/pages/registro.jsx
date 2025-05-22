@@ -62,7 +62,7 @@ function Registro() {
         alert(data.mensaje || 'Registro exitoso');
         // aquí podrías redirigir si quieres
       } else {
-        alert(data.mensaje || 'Error en el registro');
+        alert(data.error || 'Error en el registro');
       }
     } catch (err) {
       console.error('Error al registrar:', err);
