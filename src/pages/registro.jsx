@@ -25,7 +25,10 @@ function Registro() {
       credentials: 'include',  // importante para enviar y recibir cookies
     })
       .then(res => res.json())
-      .then(data => setCsrfToken(data.csrfToken))
+      .then(data => {
+      console.log('Token CSRF recibido del backend:', data.csrfToken);  // <-- depuración aquí
+      setCsrfToken(data.csrfToken);
+    })
       .catch(err => console.error('Error al obtener token CSRF:', err));
   }, []);
 
@@ -35,6 +38,7 @@ function Registro() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    console.log('Token CSRF que se enviará:', csrfToken);  // <-- depuración aquí
 
     if (form.contraseña !== form.contraseña2) {
       alert('Las contraseñas no coinciden');
