@@ -31,7 +31,7 @@ function Iniciosesion() {
     e.preventDefault();
 
     try { //Enviar el formulario al servidor
-      const res = await fetch('https://barbertalk-back.onrender.com/login', {
+      const res = await fetch('https://barbertalk-back.onrender.com/iniciosesion', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
