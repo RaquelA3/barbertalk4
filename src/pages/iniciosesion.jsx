@@ -50,7 +50,7 @@ function Iniciosesion() {
         //Enviar o guardar sesion aquí
         navigate('/inicio');
       } else {
-        alert(data.mensaje || 'Error al iniciar sesión');
+        alert(data.error || 'Error al iniciar sesión');
       }
     } catch (err) {
       console.error('Error al iniciar sesión:', err);
