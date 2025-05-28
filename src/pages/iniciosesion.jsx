@@ -48,7 +48,7 @@ function Iniciosesion() {
       if (res.ok) {
         alert(data.mensaje || 'Inicio de sesión exitoso');
         //Enviar o guardar sesion aquí
-        navigate('/agendar');
+        navigate('/agendarC');
       } else {
         alert(data.error || 'Error al iniciar sesión');
       }
@@ -78,7 +78,7 @@ function Iniciosesion() {
               <input type='password' id='contraseña' name='contraseña' value={form.contraseña} onChange={handleChange} required />
             </div>
           </div>
-          <button type='submit' className='boton-inicioS' href= '/agendar'>COMENZAR</button>
+          <button type='submit' className='boton-inicioS' href= '/agendarC'>COMENZAR</button>
           <br />
           <div className='no-cuenta'>
             <a href='/registro'>¿Aún no tienes cuenta?</a>

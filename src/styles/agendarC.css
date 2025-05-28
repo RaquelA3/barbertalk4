@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+.container5{
+    background-image: url('/img/bb2.jpeg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    position: relative;
+    
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    
+    /* Estilo para las imagenes de fondo */
+    width: 100vw;
+    height: 100vh;
+    display: flex;  
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.TituloI{
+    left: 50%;
+    align-items: center;
+    text-align: center;
+    margin-top: 10%;
+    
+}
+
+.cuadro-agendar{
+    background-color: #4B3C3C;
+    width: 50%;
+    height: 75%;
+    border-radius: 3%;
+    margin-left: 5%;
+    margin-top: 5%;
+}
+
+
+.grid-formulario {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* dos columnas iguales */
+    gap: 20px; /* espacio entre campos */
+    margin-left: 5%;
+    margin-right: 5%;
+}

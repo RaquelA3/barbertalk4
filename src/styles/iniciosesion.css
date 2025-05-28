@@ -102,7 +102,7 @@ h2 {
 
 .no-cuenta {
     text-align: center;
-    margin-top: -5%; /* corregido: más natural */
+    margin-top: -5%; 
     width: 100%;
 }
 
@@ -116,7 +116,7 @@ h2 {
     color: white;
 }
 
-/* Acomode el css para version celuar */
+/* Acomodo del css para version celular */
 @media (max-width: 768px) {
   .cuadro-inicioS {
     width: 85%;
