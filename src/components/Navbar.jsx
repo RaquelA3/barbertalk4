@@ -13,9 +13,9 @@ function Navbar() {
             <li><a href='/iniciosesion'>INICIAR SESIÓN</a></li>
             <li><a href='/preguntas'>PREGUNTAS</a></li>
             <li><a href='/contacto'>CONTACTO</a></li>
-            <li><a className='boton-agendar' href='/agendarC'>AGENDAR </a></li>
+            <li><a className='boton-agendar' href='/registro'>AGENDAR </a></li>
             
-            <a href='/agendarC'><img src="/img/calendario.png" alt="Logo calendario" className="calendario" /></a>
+            <a href='/registro'><img src="/img/calendario.png" alt="Logo calendario" className="calendario" /></a>
             
 
         </ul>
