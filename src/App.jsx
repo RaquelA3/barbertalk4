@@ -5,6 +5,7 @@ import Registro from './pages/registro';
 import Preguntas from './pages/preguntas';
 import Contacto from './pages/contacto';
 import AgendarC from './pages/agendarC';
+import Agendar from './pages/agendar';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route path='/preguntas' element={<Preguntas/>}/>
           <Route path='/contacto' element={<Contacto/>}/>
           <Route path='/agendarC' element={<AgendarC/>}/>
+          <Route path='/agendar' element={<Agendar/>}/>
        </Routes> 
     </Router>
   )
