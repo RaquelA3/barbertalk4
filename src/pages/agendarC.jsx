@@ -67,7 +67,7 @@ function AgendarC() {
 
   // Obtener token CSRF
   useEffect(() => {
-    fetch('http://localhost:3000/api/csrf-token', {
+    fetch('https://barbertalk-back.onrender.com/api/csrf-token', {
       credentials: 'include',
     })
       .then(res => res.json())
@@ -76,7 +76,7 @@ function AgendarC() {
   }, []);
 
   useEffect(() => {
-    fetch('http://localhost:3000/cita/sucursales')
+    fetch('https://barbertalk-back.onrender.com/cita/sucursales')
       .then(res => res.json())
       .then(data => {
         if (data.sucursales) setSucursales(data.sucursales);
@@ -88,7 +88,7 @@ function AgendarC() {
     useEffect(() => {
     if (!csrfToken || !idSucursal) return;
 
-    fetch('http://localhost:3000/cita/trabajadores-por-sucursal', {
+    fetch('https://barbertalk-back.onrender.com/cita/trabajadores-por-sucursal', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -108,7 +108,7 @@ function AgendarC() {
   useEffect(() => {
     if (!fecha || !barberoSeleccionado || !csrfToken) return;
 
-    fetch('http://localhost:3000/cita/bloques-disponibles', {
+    fetch('https://barbertalk-back.onrender.com/cita/bloques-disponibles', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -131,7 +131,7 @@ function AgendarC() {
   useEffect(() => {
     if (!csrfToken || !idSucursal) return;
 
-    fetch('http://localhost:3000/cita/servicios-por-sucursal', {
+    fetch('https://barbertalk-back.onrender.com/cita/servicios-por-sucursal', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -161,7 +161,7 @@ function AgendarC() {
       return;
     }
 
-    fetch('http://localhost:3000/cita/agendar', {
+    fetch('https://barbertalk-back.onrender.com/cita/agendar', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

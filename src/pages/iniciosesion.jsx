@@ -11,7 +11,7 @@ function Iniciosesion() {
 
   useEffect(() => {
     // Obtener token CSRF
-    fetch('http://localhost:3000/api/csrf-token', {
+    fetch('https://barbertalk-back.onrender.com/api/csrf-token', {
       credentials: 'include',
     })
       .then(res => res.json())
@@ -19,7 +19,7 @@ function Iniciosesion() {
       .catch(err => console.error('Error al obtener token CSRF:', err));
 
     // Verificar sesión activa
-    fetch('http://localhost:3000/login/sesion-activa', {
+    fetch('https://barbertalk-back.onrender.com/login/sesion-activa', {
       credentials: 'include',
     })
       .then(res => res.json())
@@ -40,7 +40,7 @@ function Iniciosesion() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await fetch('http://localhost:3000/login', {
+      const res = await fetch('https://barbertalk-back.onrender.com/login', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
