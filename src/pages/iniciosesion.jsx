@@ -3,6 +3,7 @@ import Navbar from '../components/Navbar';
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 
+
 function Iniciosesion() {
   const [form, setForm] = useState({ usuario: '', contraseña: '' });
   const [csrfToken, setCsrfToken] = useState('');
@@ -39,6 +40,7 @@ function Iniciosesion() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
     try {
       const res = await fetch('https://barbertalk-back.onrender.com/login', {
         method: 'POST',
@@ -61,7 +63,7 @@ function Iniciosesion() {
           navigate('/agendarC');
         }, 100); // 100 ms suele ser suficiente
       }else {
-        alert(data.error || 'Error al iniciar sesión');
+        alert(data.error || 'Los datos ingresados son incorrectos');
         setForm({ usuario: '', contraseña: '' }); // Limpiar el formulario en caso de error
       }
 
