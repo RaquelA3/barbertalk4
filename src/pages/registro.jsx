@@ -63,7 +63,7 @@ function Registro() {
       if (res.ok) {
         alert(data.mensaje || 'Registro exitoso');
         // aquí podrías redirigir si quieres
-        navigate('/agendarC');
+        navigate('/iniciosesion');
       } else {
         alert(data.error || 'Error en el registro');
       }
