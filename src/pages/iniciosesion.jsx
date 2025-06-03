@@ -54,13 +54,15 @@ function Iniciosesion() {
 
       if (res.ok) {
         alert(data.mensaje || 'Inicio de sesión exitoso');
-
         setCliente(data.cliente);
 
         // Espera breve antes de redirigir para asegurar que la cookie se guarde
         setTimeout(() => {
           navigate('/agendarC');
         }, 100); // 100 ms suele ser suficiente
+      }else {
+        alert(data.error || 'Error al iniciar sesión');
+        setForm({ usuario: '', contraseña: '' }); // Limpiar el formulario en caso de error
       }
 
     } catch (err) {
