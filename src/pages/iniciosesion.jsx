@@ -55,9 +55,8 @@ function Iniciosesion() {
       if (res.ok) {
         alert(data.mensaje || 'Inicio de sesión exitoso');
 
-        // Esta línea guarda el id_cliente del usuario autenticado en una cookie llamada "clienteId" con duración de 1 día.
         setCliente(data.cliente);
-        
+
         // Espera breve antes de redirigir para asegurar que la cookie se guarde
         setTimeout(() => {
           navigate('/agendarC');
