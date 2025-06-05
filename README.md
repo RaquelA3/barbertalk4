@@ -11,3 +11,5 @@ Usamos el dominio de render, pero como es un sitio web estatico, no tarda en car
 ## Proyecto realizado por:
 ### Amezcua Haro Raquel Itzel 21460371
 ### Vazquez Velazquez Oliver Dael 21460380
+
+### La rama de desarrollo es el que contiene el proyecto realizado con todas las mejoras de la materia
