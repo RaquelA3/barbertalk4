@@ -1,35 +1,58 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useEffect } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Inicio from './pages/inicio';
+import Iniciarsesion from './pages/iniciosesion';
+import Registro from './pages/registro';
+import Preguntas from './pages/preguntas';
+import Contacto from './pages/contacto';
+import AgendarC from './pages/agendarC';
+import Agendar from './pages/agendar';
 
 function App() {
-  const [count, setCount] = useState(0)
+  useEffect(() => {
+    if (window.console) {
+      setTimeout(() => {
+        console.log(
+          '%c¡Advertencia de seguridad!',
+          'color: red; font-size: 30px; font-weight: bold; text-shadow: 1px 1px black;'
+        );
+        console.log(
+          '%cEsta consola del navegador es una función avanzada pensada para desarrolladores.',
+          'color: #ffa500; font-size: 16px;'
+        );
+        console.log(
+          '%cSi alguien te dijo que copies y pegues aquí algo para "hackear" cuentas, obtener regalos, o acceder a funciones ocultas: %cES UNA ESTAFA.',
+          'color: black; font-size: 14px;', 'color: red; font-weight: bold;'
+        );
+        console.log(
+          '%cPegar código aquí puede darle control total de tu cuenta a otra persona.',
+          'color: black; font-size: 14px;'
+        );
+        console.log(
+          '%cNO pegues nada aquí si no sabes exactamente lo que estás haciendo.',
+          'color: black; font-size: 14px; font-weight: bold;'
+        );
+        console.log(
+          '%cEste mensaje proviene de BarberTalk 🧔✂️',
+          'color: #007bff; font-size: 14px; font-style: italic;'
+        );
+      }, 1000);
+    }
+  }, []);
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <Router>
+       <Routes>
+          <Route path='/' element={<Inicio/>}/>
+          <Route path='/iniciosesion' element={<Iniciarsesion/>}/>
+          <Route path='/registro' element={<Registro/>}/>
+          <Route path='/preguntas' element={<Preguntas/>}/>
+          <Route path='/contacto' element={<Contacto/>}/>
+          <Route path='/agendarC' element={<AgendarC/>}/>
+          <Route path='/agendar' element={<Agendar/>}/>
+       </Routes> 
+    </Router>
+  );
 }
 
-export default App
+export default App;

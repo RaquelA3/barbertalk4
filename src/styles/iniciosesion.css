@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+.container3 {
+    background-image: url('/img/FondoIS.png');
+    background-size: cover;
+    background-position: center 45%; 
+    color: white;
+    position: relative;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.cuadro-inicioS{
+    background-color: #4B3C3C;
+    width: 30%;
+    height: 47%;
+    border-radius: 3%;
+    margin-left: 1%;
+    margin-top: 4%;
+}
+
+h1 {
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+  font-size: 36px;
+  font-weight: bold;
+  color: #ffffff;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  margin-bottom: 5px;
+}
+
+h2 {
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+  font-size: 22px;
+  font-weight: 400;
+  color: #f0e6e6;
+  margin-top: 0;
+  letter-spacing: 1px;
+  text-transform: uppercase; /* opcional */
+}
+
+
+.grid-formulario2 {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-left: 5%;
+  margin-right: 5%;
+  width: 90%;
+}
+
+.grid-formulario2 label{
+    font-family: 'Roboto';
+    font-size: 13px;
+}
+
+.grid-formulario2 input {
+  padding: 5px 12px;
+  border: 1px solid;
+  border-radius: 15px;
+  background-color: #e8f5e9;
+  color: black;
+}
+
+.campo-formulario {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+
+
+
+
+.boton-inicioS {
+    display: block;
+    width: 90%; /* ajustado para que no sobresalga */
+    padding: 10px;
+    background-color: #E6A749;
+    color: white;
+    border: none;
+    border-radius: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 20px auto 10px auto; /* centrado horizontalmente */
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.boton-inicioS:hover{
+    background-color: black;
+    color: #E6A749;
+}
+
+
+.no-cuenta {
+    text-align: center;
+    margin-top: -5%; 
+    width: 100%;
+}
+
+.no-cuenta a {
+    color: #838282;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.no-cuenta a:hover{
+    color: white;
+}
+
+/* Acomodo del css para version celular */
+@media (max-width: 768px) {
+  .cuadro-inicioS {
+    width: 85%;
+    height: 43%;
+    margin-left: 0;
+    margin-top: 10%;
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 28px;
+    margin-bottom: 10px;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+
+  .grid-formulario2 {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    gap: 12px;
+  }
+
+  .boton-inicioS {
+    width: 100%;
+    font-size: 16px;
+  }
+
+  .no-cuenta {
+    margin-top: -8%;
+    font-size: 12px;
+  }
+}

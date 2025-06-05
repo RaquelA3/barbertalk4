@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+.container2 {
+    background-image: url('/img/FondoRegistro.png');
+    background-size: cover;
+    background-position: center 25%; 
+    color: white;
+    position: relative;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.cuadro-registro{
+    background-color: #4B3C3C;
+    width: 35%;
+    height: 75%;
+    border-radius: 3%;
+    margin-left: 60%;
+    margin-top: 5%;
+}
+
+h1{
+    font-family: 'Roboto';
+    align-items: center;
+    text-align: center;
+    font-size: 30px;
+    margin-left: -5%;
+}
+
+.grid-formulario {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* dos columnas iguales */
+    gap: 20px; /* espacio entre campos */
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.grid-formulario label{
+    font-family: 'Roboto';
+    font-size: 13px;
+}
+
+.grid-formulario input{
+    flex: 2;
+    padding: 3px 12px;
+    border: 1px solid;
+    border-radius: 15px;
+    background-color: #e8f5e9;
+    color: black;
+}
+
+.grid-formulario select{
+    flex: 2;
+    padding: 3px 12px;
+    border: 1px solid;
+    border-radius: 15px;
+    background-color: #e8f5e9;
+    color: black;
+}
+
+.campo-formulario {
+    display: flex;
+    flex-direction: column;
+}
+
+.boton-registrar{
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #E6A749;
+    color: white;
+    border: none;
+    border-radius: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    
+    margin-left: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.boton-registrar:hover{
+    background-color: black;
+    color: #E6A749;
+}
+
+.cuenta {
+    text-align: center;
+    margin-top: -15px;
+    margin-left: 50%;
+    width: 100%;
+}
+
+.cuenta a {
+    color: #838282;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.cuenta a:hover{
+    color: white;
+}
+
+
+/* Para version celular */
+@media (max-width: 768px) {
+    .cuadro-registro {
+        width: 85%;
+        height: 128%;
+        margin-left: 0;
+        margin-top: 115%;
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 24px;
+        margin-left: 0;
+        margin-top: 0%;
+    }
+
+    .grid-formulario {
+        grid-template-columns: 1fr; /* Una sola columna */
+        gap: 15px;
+        margin: 0;
+    }
+
+    .boton-registrar {
+        margin-left: 0;
+        width: 100%;
+        font-size: 16px;
+    }
+
+    .cuenta {
+        margin-left: 0;
+        font-size: 12px;
+        margin-top: -12%;
+    }
+}
