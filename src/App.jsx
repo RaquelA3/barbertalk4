@@ -6,6 +6,7 @@ import Preguntas from './pages/preguntas';
 import Contacto from './pages/contacto';
 import AgendarC from './pages/agendarC';
 import Agendar from './pages/agendar';
+import Base from './pages/base';
 
 function App() {
   return (
@@ -18,6 +19,8 @@ function App() {
           <Route path='/contacto' element={<Contacto/>}/>
           <Route path='/agendarC' element={<AgendarC/>}/>
           <Route path='/agendar' element={<Agendar/>}/>
+          <Route path='/agendar' element={<Agendar/>}/>
+          <Route path='/base' element={<Base/>}/>
        </Routes> 
     </Router>
   )
