@@ -35,7 +35,7 @@
     display: block;
 }
 
-h2{
+.Titulo-Base{
     font-family: 'Saira Extra Condensed', sans-serif;
     position: absolute;
     color: #E6A749;
@@ -47,7 +47,7 @@ h2{
     text-transform: none;
 }
 
-h1{
+.Subtitulo-Base{
     font-family: 'Saira Semi Condensed', sans-serif;
     font-weight: 700;
     position: absolute; 
@@ -74,7 +74,7 @@ h1{
     height: 50px;
 }
 
-h3{
+.Sub2-Base{
     font-family: 'Roboto';
     font-weight: 600;
     position: absolute; 
@@ -115,7 +115,7 @@ h3{
 
 
 /* Esto es lo del titulo de "Nuestros Servicios" */
-h4{
+.Sub3-Base{
     font-family: 'Saira Extra Condensed', sans-serif;
     font-weight: 600;
     position: absolute; 

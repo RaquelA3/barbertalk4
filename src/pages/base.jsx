@@ -13,15 +13,15 @@ function Base() {
        
        <div className='principal-h'>
           <img className='logo-principal' alt='no aparece' src='/img/P-Base.png'></img>
-          <h2>Bienvenido a</h2>
-          <h1>
+          <h2 className='Titulo-Base'>Bienvenido a</h2>
+          <h1 className='Subtitulo-Base'>
               <span class="blanco">Barber</span> <span class="amarillo">Talk</span>
           </h1>
           <img className='bigote-principal' alt='no aparece' src='/img/BBigote.png'></img>
-          <h3>¿Listo para lucir un nuevo look?</h3>
+          <h3 className='Sub2-Base'>¿Listo para lucir un nuevo look?</h3>
           <a className='boton' href='/registro'>AGENDAR CITA</a>   
 
-          <h4>
+          <h4 className='Sub3-Base'>
               <span class="negro">Nuestros</span> <span class="ama">servicios</span>
               <img className='bigote2' alt='no aparece' src='/img/BBigote.png'></img>
           </h4>
