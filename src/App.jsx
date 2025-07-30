@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Inicio from './pages/inicio';
 import Iniciarsesion from './pages/iniciosesion';
@@ -9,6 +10,37 @@ import Agendar from './pages/agendar';
 import Base from './pages/base';
 
 function App() {
+  useEffect(() => {
+    if (window.console) {
+      setTimeout(() => {
+        console.log(
+          '%c¡Advertencia de seguridad!',
+          'color: red; font-size: 30px; font-weight: bold; text-shadow: 1px 1px black;'
+        );
+        console.log(
+          '%cEsta consola del navegador es una función avanzada pensada para desarrolladores.',
+          'color: #ffa500; font-size: 16px;'
+        );
+        console.log(
+          '%cSi alguien te dijo que copies y pegues aquí algo para "hackear" cuentas, obtener regalos, o acceder a funciones ocultas: %cES UNA ESTAFA.',
+          'color: black; font-size: 14px;', 'color: red; font-weight: bold;'
+        );
+        console.log(
+          '%cPegar código aquí puede darle control total de tu cuenta a otra persona.',
+          'color: black; font-size: 14px;'
+        );
+        console.log(
+          '%cNO pegues nada aquí si no sabes exactamente lo que estás haciendo.',
+          'color: black; font-size: 14px; font-weight: bold;'
+        );
+        console.log(
+          '%cEste mensaje proviene de BarberTalk 🧔✂️',
+          'color: #007bff; font-size: 14px; font-style: italic;'
+        );
+      }, 1000);
+    }
+  }, []);
+
   return (
     <Router>
        <Routes>
@@ -23,7 +55,7 @@ function App() {
           <Route path='/base' element={<Base/>}/>
        </Routes> 
     </Router>
-  )
+  );
 }
 
 export default App;

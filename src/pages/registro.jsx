@@ -28,7 +28,6 @@ function Registro() {
     })
       .then(res => res.json())
       .then(data => {
-      console.log('Token CSRF recibido del backend:', data.csrfToken);  // <-- depuración aquí
       setCsrfToken(data.csrfToken);
     })
       .catch(err => console.error('Error al obtener token CSRF:', err));
@@ -40,7 +39,6 @@ function Registro() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log('Token CSRF que se enviará:', csrfToken);  // <-- depuración aquí
 
     if (form.contraseña !== form.contraseña2) {
       alert('Las contraseñas no coinciden');
@@ -63,7 +61,7 @@ function Registro() {
       if (res.ok) {
         alert(data.mensaje || 'Registro exitoso');
         // aquí podrías redirigir si quieres
-        navigate('/agendarC');
+        navigate('/iniciosesion');
       } else {
         alert(data.error || 'Error en el registro');
       }
@@ -104,7 +102,6 @@ function Registro() {
                 <option value="">Seleccione una opción</option>
                 <option value="Masculino">Masculino</option>
                 <option value="Femenino">Femenino</option>
-                <option value="Otro">Otro</option>
               </select>
             </div>
 
