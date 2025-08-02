@@ -8,6 +8,7 @@ import Contacto from './pages/contacto';
 import AgendarC from './pages/agendarC';
 import Agendar from './pages/agendar';
 import Base from './pages/base';
+import PrincipalUsuario from './pages/principalUsuario';
 
 function App() {
   useEffect(() => {
@@ -53,6 +54,7 @@ function App() {
           <Route path='/agendar' element={<Agendar/>}/>
           <Route path='/agendar' element={<Agendar/>}/>
           <Route path='/base' element={<Base/>}/>
+          <Route path='/principalUsuario' element={<PrincipalUsuario/>}/>
        </Routes> 
     </Router>
   );

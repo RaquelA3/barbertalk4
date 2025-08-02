@@ -62,8 +62,9 @@
 }
 
 .boton-agendar:hover{
-    background-color: rgb(255, 255, 255);
+    background-color: white;
     color: #E6A749;
+    box-shadow: 0 0 10px #FFD700;
 }
 
 .boton-agendar:active{

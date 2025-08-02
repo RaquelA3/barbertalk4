@@ -1,0 +1,873 @@
+/* Estos links son para obtener el tipo de letra de Roboto y Saira de los titulos */
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Saira+Extra+Condensed&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Saira+Extra+Condensed:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Saira+Semi+Condensed:wght@500;600;700;800&display=swap');
+
+.container-PrincipalU{
+    background-color: #EDE7E5;
+    background-size: cover;
+    background-position: center 25%; 
+    color: black;
+    position: relative;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;  
+}
+
+.cuadro-PU{
+    position: relative;
+    width: 1300px;
+    height: 320px;
+    margin-top: -13%;
+    border: 1px solid #986315; 
+}
+
+.logo-principalPU{
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.Titulo-PU{
+    font-family: 'Saira Extra Condensed', sans-serif;
+    position: absolute;
+    color: #E6A749;
+    top: 5%;
+    margin-left: 45%;
+    font-size: 30px;
+    font-weight: 700; 
+    letter-spacing: 0.5px;
+    text-transform: none;
+}
+
+.Subtitulo-PU{
+    font-family: 'Saira Semi Condensed', sans-serif;
+    font-weight: 700;
+    position: absolute; 
+    top: 8%;
+    left: 42%;
+    font-size: 57px;
+    letter-spacing: 0.5px;
+    text-transform: none;
+}
+
+.blancoPU{
+    color: white;
+}
+
+.amarilloPU{
+    color: #E6A749;
+}
+
+.bigote-principalPU{
+    position: absolute;
+    top: 36.5%;
+    left: 40.5%;
+    width: 270px;
+    height: 50px;
+}
+
+.Sub2-PU{
+   font-family: 'Roboto';
+    font-weight: 600;
+    position: absolute; 
+    top: 50%;
+    left: 30%;
+    width: 50%;
+    font-size: 37px;
+    color: white;
+    letter-spacing: 0.5px;
+    text-transform: none; 
+}
+
+.botonPU{
+    font-family: 'Roboto';
+    font-weight: 800;
+    position: absolute;
+    top: 80%;
+    left: 43%;
+    background-color: #E6A749;
+    color: white;
+    padding: 0.5rem 2.5rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.botonPU:hover{
+    background-color: rgb(255, 255, 255);
+    color: #E6A749;
+}
+
+.botonPU:active{
+    background-color: rgb(255, 255, 255);
+    color: #E6A749;
+    transform: scale(1.1);
+}
+
+/* Esto es lo del titulo de "Resumen de Actividad" */
+.Sub3-PU{
+    font-family: 'Saira Extra Condensed', sans-serif;
+    font-weight: 600;
+    position: absolute; 
+    top: 92%;
+    left: 45%;
+    font-size: 25px;
+    letter-spacing: 0.5px;
+    text-transform: none;
+}
+
+.negroPU{
+    color: black;
+}
+
+.amaPU{
+    color: #E6A749;
+}
+
+.bigotePU{
+    position: absolute;
+    top: 65%;
+    left: -1%;
+    width: 160px;
+    height: 25px;
+}
+
+/* Esto es del contenedor de resumen del usuario*/
+.resumen{
+    width: 100%;            
+    margin-left: 2%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 10px 0;       /* Padding de arriba y abajo */
+    box-sizing: border-box;
+}
+
+.cardPU{
+    background-color: white;
+    width: 310px;
+    height: 90px;
+    margin-top: 4.5%;
+    margin-left: -2%;
+    margin-right: 2%;
+    border: 3.5px solid #986315;
+    padding: 40px;
+    transition: all 0.3s ease-in-out;
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+    text-align: center;
+    position: relative; 
+    overflow: hidden;   /* Evita que se salga la imagen */
+    color: black;  
+}
+
+/* El fondo mas brillante cuando paso el cursor */
+.cardPU::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background: linear-gradient(
+  120deg,
+  rgba(255, 220, 150, 0.7),
+  rgba(230, 167, 73, 0.8),
+  rgba(213, 137, 84, 0.8)
+  );
+  z-index: 0;
+  transition: width 0.4s ease-in-out;
+}
+
+.cardPU:hover::after {
+  width: 100%;
+  color: white;
+}
+
+/* Asegura que el contenido quede encima del fondo */
+.cardPU > * {
+    position: relative;
+    z-index: 1;
+}
+
+/* Esto es de la imagen perfil y el titulo */
+.logo-perfil{
+    width: 80px;
+    height: auto;
+    margin-top: -2%;
+}
+
+.tituloP{
+    margin-top: 1%;
+    font-family: 'Roboto';
+    font-weight: 500;
+    color: black;
+    text-align: center;
+}
+
+/* Este es un efecto para el titulo */
+.cardPU:hover .tituloP{
+    color: white;
+}
+
+/* Esto hace que la imagen se vuelva mas blanca */
+.cardPU:hover .logo-perfil{
+    filter: brightness(10);
+}
+
+
+
+
+
+
+
+
+
+
+/*----------------------------------------------------- */
+/* Parte de NUESTROS SERVICIOS BARBER TALK*/
+.lista{
+    background-color: #EDE7E5;
+    width: 100%;            
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 10px 2%;       /* Padding de arriba y abajo */
+    box-sizing: border-box;
+}
+
+.Titulo-2{
+    font-family: 'Saira Extra Condensed', sans-serif;
+    font-weight: 700;
+    position: absolute; 
+    top: 172%;
+    left: 47.7%;
+    font-size: 25px;
+    letter-spacing: 0.5px;
+    text-transform: none;
+    color: #986315;
+}
+
+.Sub4-PU{
+    font-family: 'Saira Semi Condensed', sans-serif;
+    font-weight: 700;
+    position: absolute; 
+    top: 162%;
+    left: 45%;
+    font-size: 45px;
+    letter-spacing: 0.5px;
+    text-transform: none;
+}
+
+.negro2{
+    color: black;
+}
+
+.ama2{
+    margin-left: 4%;
+    color: #986315;
+}
+
+.Bigote2{
+    position: absolute;
+    top: 72%;
+    left: -29%;
+    width: 350px;
+    height: 55px;
+}
+
+
+/* Esto es del contenedor de servicios */
+.serviciosPU {
+  width: 100%;            
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0px;
+  margin-top: -8%;
+  box-sizing: border-box;
+}
+
+
+.card-Usuario {
+    background-color: white;
+    width: 150px;
+    height: 180px;
+    margin-top: 20%;
+    margin-left: -2%;
+    margin-right: -2%;
+    border: 3.5px solid #986315;
+    padding: 45px;
+    transition: all 0.3s ease-in-out;
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+    text-align: center;
+    position: relative; 
+    overflow: hidden;   /* Evita que se salga la imagen */
+    color: black;      
+}
+
+/* El fondo aparece mas oscuro */
+.card-Usuario:hover::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background-image: url('/img/Barba-Cuadro.jpg');
+    background-size: cover;
+    background-position: center;
+    filter: brightness(0.5);
+
+    z-index: 0;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Asegura que el contenido quede encima del fondo */
+.card-Usuario > * {
+    position: relative;
+    z-index: 1;
+}
+
+/* Activar efecto en hover */
+.card-Usuario:hover::after {
+  opacity: 1;
+}
+
+/* Puse una imagen distinta para cada cuadro */
+.cardPU1:hover::after {
+  background-image: url('/img/Barba-Cuadro.jpg');
+}
+
+.cardPU2:hover::after {
+  background-image: url('/img/Corte-Cuadro.png');
+}
+
+.cardPU3:hover::after {
+  background-image: url('/img/Afeitado-Cuadro.png');
+}
+
+.cardPU4:hover::after {
+  background-image: url('/img/Tinte-Cuadro.jpg');
+}
+
+.cardPU5:hover::after {
+  background-image: url('/img/Limpieza-Cuadro.jpg');
+}
+
+
+.logo-corte-PU{
+    width: 60px;
+    height: auto;
+    margin-top: -12%;
+}
+
+.titulo2-PU{
+    margin-top: 15%;
+    font-family: 'Roboto';
+    font-weight: 500;
+    color: black;
+    text-align: center;
+}
+
+
+.decoracionX-PU{
+    color: #FF6A0E;
+    font-family: 'Roboto';
+    font-weight: 700;
+    font-size: 15px;
+    text-align: center;
+    margin-top: -5%;
+}
+
+.descripcion-PU{
+    color: black;
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 12px;
+    text-align: center;
+    margin-top: 5%;
+}
+
+/* Aqui yo le cambie el estilo de varios elementos cuando estan en estado de hover */
+.card-Usuario:hover .titulo2-PU,
+.card-Usuario:hover .descripcion-PU{
+    color: white;
+}
+
+.card-Usuario:hover .decoracionX-PU{
+    color: #E6A749;
+}
+
+
+/* Aqui puse los cuadros chiquitos donde vinen la cantidad de servicios
+   que hemos hecho, supuestamente */ 
+.Titulo-3{
+    font-family: 'Saira Extra Condensed', sans-serif;
+    font-weight: 700;
+    position: absolute; 
+    top: 320%;
+    left: 43%;
+    font-size: 27px;
+    letter-spacing: 0.5px;
+    text-transform: none;
+    color: #986315;
+}
+
+.negro3{
+    color: black;
+}
+
+.ama3{
+    color: #986315;
+}
+
+.Bigote3{
+    position: absolute;
+    top: 85%;
+    left: -15%;
+    width: 320px;
+    height: 32px;
+}
+
+/* Esto es del contenedor de total de servicios realizados */
+.totalS-PU {
+  width: 100%;            
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 150px;
+  margin-top: -14%;
+  box-sizing: border-box;
+}
+
+.card-Total {
+    background-color: white;
+    width: 10px;
+    height: 5px;
+    margin-top: 20%;
+    margin-left: -2%;
+    margin-right: -1%;
+    border: 3.5px solid #986315;
+    padding: 45px;
+    transition: all 0.3s ease-in-out;
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+    text-align: center;
+    position: relative; 
+    overflow: hidden;   /* Evita que se salga la imagen */
+    color: black;      
+}
+
+.card-Total.ct5{
+    margin-right: 8%;
+}
+
+.logo-total{
+    width: 70px;
+    height: auto;
+    margin-top: -310%;
+    margin-left: -290%;
+}
+
+
+/* Esto es el diseño de los numeros y nombres de los servicios */
+.texto{
+    font-family: 'Roboto';
+    text-align: center;
+}
+
+.grupo-numeros,
+.grupo-nombres{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.numero{
+    font-size: 30px;
+    font-weight: 900;
+    color: #986315;
+    margin-top: -8%;
+}
+
+/* En esta le puse un margen mas detallado*/
+.numero.n1{
+    margin-left: 8%;
+}
+.numero.n2{
+    margin-left: 18%;
+}
+.numero.n3{
+    margin-left: 18%;
+}
+.numero.n4{
+    margin-left: 17.5%;
+}
+.numero.n5{
+    margin-left: 94%;
+} 
+
+
+.nombre-servicio{
+    font: 16px;
+    font-weight: 500;
+    color: black;
+    margin-top: -4%;
+}
+
+.nombre-servicio.s1{
+    margin-left: 8.2%;
+}
+.nombre-servicio.s2{
+    margin-left: 14.2%;
+}
+.nombre-servicio.s3{
+    margin-left: 11.3%;
+}
+.nombre-servicio.s4{
+    margin-left: 72.6%;
+}
+.nombre-servicio.s5{
+    margin-left: 94%;
+}
+
+
+
+
+
+
+
+
+
+
+/* --------------------------------------------------- */
+/* Esta parte es la de precios */
+.precios{
+    background-color: #EDE7E5;
+    width: 100%;
+    max-width: 100%;            
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 10px 2%;       /* Padding de arriba y abajo */
+    box-sizing: border-box;
+}
+
+.Titulo-4{
+    font-family: 'Saira Extra Condensed', sans-serif;
+    font-weight: 700;
+    position: absolute; 
+    top: 390%;
+    left: 48%;
+    font-size: 25px;
+    letter-spacing: 0.5px;
+    text-transform: none;
+    color: #986315;
+}
+
+.Sub5-PU{
+    font-family: 'Saira Semi Condensed', sans-serif;
+    font-weight: 700;
+    position: absolute; 
+    top: 400%;
+    left: 45%;
+    font-size: 45px;
+    letter-spacing: 0.5px;
+    text-transform: none;
+}
+
+.negro4{
+    color: black;
+}
+
+.ama4{
+    margin-left: 1.5%;
+    color: #986315;
+}
+
+.Bigote4{
+    position: absolute;
+    top: 80%;
+    left: -29%;
+    width: 350px;
+    height: 55px;
+}
+
+
+/* Esto es del cuadro de los precios y la imagen de barberos-precio */
+.cuadro-precios{
+    width: 80%;
+    max-width: 2000px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 30px;
+    background-color: white;
+    padding: 40px;
+    color: white;
+    margin-top: 14%;
+    margin-left: 9%;
+    margin-right: auto;
+    height: 56.3vh;
+    box-sizing: border-box;
+    border: 3.5px solid #986315;
+}
+
+.lista-precios{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    text-align: center;
+} 
+
+.Sub6-PU{
+    font-size: 30px;
+    font-family: 'Roboto';
+    font-weight: 700;
+    color: black;
+    margin-top: -9%;
+}
+
+.Bigote5{
+    margin-top: -9%;
+}
+
+.precio-descripcion{
+    font-size: 13px;
+    font-family: 'Roboto';
+    font-weight: 300;
+    color: black;
+    margin-top: -3%;
+    text-align: justify;
+}
+
+.servicio-precios {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 20px;
+  margin-top: -8%;
+}
+
+.servicio-precios:hover{
+    background-color: rgba(255, 255, 255, 0.05);
+    transform: scale(1.03);
+}
+
+.N-Servicio,
+.Precio {
+    color: black;
+    font-weight: 500;
+    /* text-shadow: 0 0 5px #FF8C00; */
+}
+
+.Precio{
+    color: #986315;
+    font-weight: 700;
+}
+.linea-decorativa {
+  width: 100%;
+  height: 2px;
+  background-color: #FF8C00;
+  border-radius: 1px;
+  margin: -15px auto 10px;
+}
+
+.boton-citaPU{
+    margin-top: -5%;
+    padding: 9px 25px;
+    border-radius: 10px;
+    background-color: #E6A749;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    border: none;
+    outline: none;
+}
+
+.boton-citaPU:hover{
+    background-color: white;
+    color: #E6A749;
+    box-shadow: 0 0 10px #FFD700;
+    border: none;
+    outline: none;
+}
+
+.boton-citaPU:active{
+    background-color: rgb(255, 255, 255);
+    color: #E6A749;
+    transform: scale(1.1);
+    border: none;
+    outline: none;
+}
+/* Esto es para quitar el borde del boton cuando no esta
+el cursor sobre el */
+.boton-citaPU:focus{
+    border: none;
+    outline: none; /* Esto quita el borde al boton*/
+}
+
+
+/* Esto es de la imagen de precios*/
+.imagen-barberia img{
+    width: 109.8%;
+    margin-top: -8.5%;
+    margin-left: -9%;
+}
+
+.barberia{
+    width: 100%;
+    max-width: 600px;
+}
+
+
+
+
+
+
+
+
+
+/* ----------------------------------------------------- */
+/* Esta parte de aqui, es el final de la pagina*/
+.final-pagina{
+    width: 118%;
+    background-color: #0e0d0f;
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 10px;
+    padding: 21px 40px;
+    font-family: 'Roboto';
+    position: relative;
+    box-sizing: border-box;
+    margin-left: -8.8%; 
+    margin-top: 8%;
+    height: 30%; 
+    z-index: 0;/*  Esto manda todo el texto para adelante */
+}
+
+.Logo-descripcion-F,
+.horario-F,
+.contacto-F{
+    flex: 1;
+    min-width: 250px;
+    font-family: 'Saira ExtraCondensed';
+    font-weight: 300;
+}
+
+.horario-F,
+.contacto-F {
+    flex-basis: 25%;
+    max-width: 27%;
+}
+
+.final-logo{
+    width: 60%;
+    height: auto;
+    margin-top: -1%;
+    margin-left: 8%;
+}
+
+.final-descripcion{
+    width: 55%;
+    font-family: 'Saira ExtraCondensed';
+    font-size: 18.5px;
+    line-height: 20px;
+    text-align: justify;
+    font-weight: 400;
+    margin-left: 10%;
+    color: white;
+}
+
+.sub-horario,
+.sub-contacto{
+    font-size: 25px;
+    font-weight: 500;
+    display: block;
+    font-family: 'Roboto Condensed';
+}
+
+.blanco5{
+    color: white;
+}
+
+.ama5{
+    color: #986315;
+    margin-left: 5px;
+}
+
+.linea-horario {
+  width: 27.5%;
+  height: 2px;
+  background-color: #986315;
+  border-radius: 1px;
+  text-align: left;
+}
+
+.linea-contacto {
+  width: 24%;
+  height: 2px;
+  background-color: #986315;
+  border-radius: 1px;
+  text-align: left;
+}
+
+.auto-F{
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    font-size: 12px;
+    color: white;
+    width: 100%;
+    text-align: center;
+    border-top: 1px solid #c68b2c;
+    padding-top: 10px;
+}
+
+.linea-autor {
+    width: 100%;
+    height: 2px;
+    background-color: #986315;
+    border-radius: 1px;
+    text-align: left;
+    margin-top: 1%;
+}
+
+.fondo-imagen-final{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60%;
+    height: auto;
+    object-fit: cover;
+    filter: brightness(0.3); /* Esto oscurece solo la imagen */
+    z-index: -1; /* Esto hace que la imagen se vaya al fondo */
+    pointer-events: none;
+    margin-left: 20%;
+    margin-top: 2.5%;
+}

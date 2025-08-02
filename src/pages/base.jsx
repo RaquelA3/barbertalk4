@@ -19,7 +19,7 @@ function Base() {
           </h1>
           <img className='bigote-principal' alt='no aparece' src='/img/BBigote.png'></img>
           <h3 className='Sub2-Base'>¿Listo para lucir un nuevo look?</h3>
-          <a className='boton' href='/registro'>AGENDAR CITA</a>   
+          <a className='boton' href='/principalUsuario'>AGENDAR CITA</a>   
 
           <h4 className='Sub3-Base'>
               <span class="negro">Nuestros</span> <span class="ama">servicios</span>
@@ -31,31 +31,31 @@ function Base() {
                  <img className='logo-corte' alt='no aparece' src='/img/tijera.png'></img>
                  <p className='titulo'>Corte de Pelo</p>
                  <p className='decoracionX'>x x x x</p>
-                 <p className='descripcion'>Suspendisse a blandit leo. Ut malesuada, enim sed malesuada</p>
+                 <p className='descripcion'>Renueva tu estilo con precisión. Que tu imagen habla por si misma.</p>
             </div>
             <div className='card card2'>
                  <img className='logo-corte' alt='no aparece' src='/img/Diseño.png'></img>
                  <p className='titulo'>Diseño de Corte</p>
                  <p className='decoracionX'>x x x x</p>
-                 <p className='descripcion'>Suspendisse a blandit leo. Ut malesuada, enim sed malesuada</p>
+                 <p className='descripcion'>Detalles que definen tu estilo. Líneas únicas para cada personalidad.</p>
             </div>
             <div className='card card3'>
                  <img className='logo-corte' alt='no aparece' src='/img/Rastrillo.png'></img>
                  <p className='titulo'>Afeitado de Barba</p>
                  <p className='decoracionX'>x x x x</p>
-                 <p className='descripcion'>Suspendisse a blandit leo. Ut malesuada, enim sed malesuada</p>
+                 <p className='descripcion'>Cuidado de expertos para tu barba. Estilo limpio, carácter fuerte.</p>
             </div>
             <div className='card card4'>
                  <img className='logo-corte' alt='no aparece' src='/img/Tinte.png'></img> 
                  <p className='titulo'>Tintes de Cabello</p>
                  <p className='decoracionX'>x x x x</p>
-                 <p className='descripcion'>Suspendisse a blandit leo. Ut malesuada, enim sed malesuada</p>
+                 <p className='descripcion'>Transforma tu look con color. Sé audaz, se diferente siempre.</p>
             </div>
             <div className='card card5'>
                  <img className='logo-corte' alt='no aparece' src='/img/Silla.png'></img>
                  <p className='titulo'>Limpieza Facial</p>
                  <p className='decoracionX'>x x x x</p>
-                 <p className='descripcion'>Suspendisse a blandit leo. Ut malesuada, enim sed malesuada</p>
+                 <p className='descripcion'>Refresca tu piel con limpieza total. Rostro sano, confianza completa.</p>
             </div>    
         </div>
 
