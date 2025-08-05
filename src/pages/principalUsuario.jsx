@@ -19,7 +19,7 @@ function principalUsuario() {
         </h1>
         <img className='bigote-principalPU' alt='no aparece' src='/img/BBigote.png'></img>
         <h3 className='Sub2-PU'>¿Listo para lucir un nuevo look?</h3>
-        <a className='botonPU' href='/registro'>AGENDAR CITA</a>  
+        <a className='botonPU' href='/reservarCita'>AGENDAR CITA</a>  
 
         <h4 className='Sub3-PU'>
           <span className='negroPU'>Resumen de </span><span className='amaPU'>Actividad</span>
@@ -174,7 +174,7 @@ function principalUsuario() {
                       </div>
                       <div className='linea-decorativa'></div>
 
-                      <button className='boton-citaPU'>AGENDAR CITA</button>
+                      <a className='boton-citaPU' href='reservarCita'>AGENDAR CITA</a>
                    </div>
                </div> {/* Este cierra el de cuadro precios */}
              </div> {/* Este cierra lo de precios */}
