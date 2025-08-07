@@ -29,7 +29,7 @@ function principalUsuario() {
 
         {/* Esto son los 3 cuadros del resumen */}
         <div className='resumen'>
-            <div className='cardPU'>
+            <div className='cardPU' onClick={() => navigate('/perfilUsuario')}>
                <img className='logo-perfil' alt='no aparece' src='/img/Perfil-PU.png'></img>
                <p className='tituloP'>Mi perfil</p>
             </div> 

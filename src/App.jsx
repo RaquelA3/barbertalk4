@@ -10,6 +10,7 @@ import Agendar from './pages/agendar';
 import Base from './pages/base';
 import PrincipalUsuario from './pages/principalUsuario';
 import ReservarCita from './pages/reservarCita';
+import PerfilUsuario from './pages/perfilUsuario';
 
 function App() {
   useEffect(() => {
@@ -57,6 +58,7 @@ function App() {
           <Route path='/base' element={<Base/>}/>
           <Route path='/principalUsuario' element={<PrincipalUsuario/>}/>
           <Route path='/reservarCita' element={<ReservarCita/>}/>
+          <Route path='/perfilUsuario' element={<PerfilUsuario/>}/>
        </Routes> 
     </Router>
   );

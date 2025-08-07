@@ -1,0 +1,212 @@
+/* Estos links son para obtener el tipo de letra de Roboto y Saira de los titulos */
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Saira+Extra+Condensed&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Saira+Extra+Condensed:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Saira+Semi+Condensed:wght@500;600;700;800&display=swap');
+
+.container-perfilUsuario{
+    background-color: #EDE7E5;
+    background-size: cover;
+    background-position: center 25%; 
+    color: black;
+    position: relative;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+}
+
+
+
+
+/* ------------------------------------------------------- */
+/* Cuadro donde van los datos del perfil usuario */
+.cuadro-datos-U{
+    width: 88%;
+    max-width: 2000px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 30px;
+    background-color: white;
+    padding: 40px;
+    color: white;
+    margin-top: 5%;
+    margin-left: 6%;
+    margin-right: auto;
+    height: 78%;
+    box-sizing: border-box;
+    border: 3.8px solid #986315;
+}
+
+.resumen-perfilU{
+    position: relative;
+    width: 100%;
+    height: 320px;
+    margin-top: -13%;
+}
+
+/* Esto es la imagen de barbero, la grande de la izquierda */
+.imagen-datosU{
+    position: relative;
+    margin-left: -2%;
+    margin-top: -1.5%;
+    width: 31.5%;
+    height: auto;
+}
+
+/* Esto es la imagen del logo de las tijeras */
+.imagenTijeras-perfilU{
+    margin-left: 49.5%;
+    margin-top: 16%;
+    width: 10%;
+    height: auto;
+}
+
+/* Esta parte es del diseño de Titulo de Mis citas */
+.Titulo-perfilU{
+    font-family: 'Saira Semi Condensed';
+    font-weight: 700;
+    position: absolute; 
+    top: 60%;
+    left: 46.5%;
+    font-size: 42px;
+    text-transform: none;
+}
+
+.negro1-perfilU{
+    color: black;
+}
+
+.ama1-perfilU{
+    color: #986315;
+}
+
+/* Esto es del cuadro blanco que contene los datos */
+.contenido-perfilU{
+    margin-top: 7%;
+    margin-left: 10%;
+    color: black;
+}
+
+/* Esto es de la parte de los label, donde viene el titulo del nombre,
+correo, edad y demas */
+.label-nombre-perfilU,
+.label-correo-perfilU,
+.label-telefono-perfilU,
+.label-edad-perfilU,
+.label-calle-perfilU,
+.label-colonia-perfilU{
+    color: black;
+    margin-left: -7%;
+    font-family: 'Roboto';
+    font-size: 20px;
+    font-weight: 400;
+    display: block;          /* hace que cada label esté en su propia línea */
+    margin-bottom: -17px; 
+    letter-spacing: 0.50px;
+}
+
+/* Esto es de los inputs */
+.input-nombre-perfilU,
+.input-correo-perfilU,
+.input-telefono-perfilU,
+.input-edad-perfilU,
+.input-calle-perfilU,
+.input-colonia-perfilU{
+    color: black;
+    background-color: white;
+    border: 2px solid #A59E9E;
+    font-size: 15px;
+    font-family: 'Roboto';
+    margin-left: 25%;
+    width: 70%;
+    position: relative;
+    top: -10.5px;
+}
+
+/* Esto es del boton de arriba que guarda-actualiza los datos */
+.boton-guardar-perfilU{
+    position: relative;
+    top: -389px;
+    margin-left: 79.85%;
+    padding: 12px;
+    border-radius: 0;
+    background-color: #E6A749;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    border: none;
+    outline: none;
+    font-family: 'Roboto';
+    width: 25%;
+}
+
+.boton-guardar-perfilU:hover{
+    background-color: white;
+    color: #E6A749;
+    box-shadow: 0 0 10px #FFD700;
+    border: none;
+    outline: none;
+}
+
+.boton-guardar-perfilU:active{
+    background-color: rgb(255, 255, 255);
+    color: #E6A749;
+    transform: scale(1.1);
+    border: none;
+    outline: none;
+}
+
+/* Esto es la parte final del cuadro donde aparece los numeros de cuantas citas ha tenido */
+.detalles-perfilU{
+    color: black;
+    margin-top: 1%;
+}
+
+/* Esto es del titulo de Detalles de la cita */
+.sub1-perfilU{
+    color: black;
+    font-family: 'Roboto';
+    font-weight: 800;
+    font-size: 21.5px;
+    text-transform: none;
+    position: relative;
+    left: -33%;
+    top: -30px;
+}
+
+.num-detalles-perfilU{
+    display: flex;            /* Hace que los numeros estén en la misma línea */
+    gap: 268px;               /* Esto da un espacio entre cada numero */
+    color: #986315;
+    font-family: 'Roboto';
+    font-size: 23px;
+    font-weight: 700;
+    margin-left: 13%;
+    margin-top: -7%;
+}
+
+.texto-detalles-perfilU{
+    color: black;
+    font-size: 18px;
+    font-family: 'Roboto';
+    display: flex;            /* Hace que los textos estén en la misma línea */
+    gap: 203px;               /* Esto da un espacio entre cada texto */
+    margin-left: 10%;
+    margin-top: -4.5%;
+}
+
+/* Esto lo puse extra para ajustar bien la distancia del texto que dice total */
+.textoD3-U{
+    margin-left: 2.8%;
+}

@@ -151,7 +151,7 @@
     margin-top: 14%;
 }
 
-
+/* Estos son de label o p */
 .cuadro-sucursal-R,
 .Sucursal-R,
 .cuadro-fecha-R,
@@ -167,6 +167,7 @@
     text-align: center;
 }
 
+/* Esto es la parte de los inputs o donde se selecciona la hora, fecha y demas */
 .sucursal-seleccionada,
 .fecha-R,
 .horaC-R,
