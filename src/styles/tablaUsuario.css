@@ -1,0 +1,120 @@
+/* Estos links son para obtener el tipo de letra de Roboto y Saira de los titulos */
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Saira+Extra+Condensed&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Saira+Extra+Condensed:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Saira+Semi+Condensed:wght@500;600;700;800&display=swap');
+
+.container-tablaUsuario{
+    background-color: #EDE7E5;
+    background-size: cover;
+    background-position: center 25%; 
+    color: black;
+    position: relative;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+}
+
+.imagen-tablaRU{
+    width: 4.5%;
+    height: auto;
+    position: relative;
+    top: -85px;
+    margin-left: 35%;  
+}
+
+.Titulo-tablaRU{
+    font-family: 'Saira Extra Condensed';
+    font-weight: 800;
+    position: absolute; 
+    top: 10%;
+    left: 46%;
+    font-size: 35px;
+}
+
+.negro1-tablaRU{
+    color: black;
+}
+
+.ama1-tablaRU{
+    color: #986315;
+}
+
+.Bigote1-tablaRU{
+    width: 250px;
+    height: auto;
+    position: relative;
+    top: -49px;
+    left: -0.5%;
+}
+
+.contenido-tituloRU{
+    margin-top: 14%;
+}
+
+
+
+
+
+
+/* ------------------------------------------------------- */
+/* Esta parte es unicamente del diseño de la tabla */
+.contenedor-tabla-citasRU{
+    width: 130%;
+    overflow-x: auto;
+    margin-left: -15.3%;
+    position: relative;
+    top: -30px;
+}
+
+.tabla-citasRU{
+    width: 100%;
+    border-collapse: collapse;
+    font-family: sans-serif;
+    font-size: 16px;
+    text-align: left;
+}
+
+.tabla-citasRU thead{
+    background-color: #CF7C00;
+    color: white;
+}
+
+.tabla-citasRU th,
+.tabla-citasRU td{
+    border: 2.3px solid #a36200;
+    padding: 12px;
+    min-width: 150px;
+}
+
+.tabla-citasRU th{
+    text-align: center;
+}
+.tabla-citasRU td{
+    background-color: white;
+    color: #333;
+}
+
+
+.tabla-citasRU tbody tr:hover{
+    background-color: white;
+    color: #E6A749;
+    box-shadow: 0 0 10px #FFD700;
+    border: none;
+    outline: none;
+    transform: scale(1);
+}
+
+
+
+
+

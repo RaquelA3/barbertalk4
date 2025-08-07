@@ -33,7 +33,7 @@ function principalUsuario() {
                <img className='logo-perfil' alt='no aparece' src='/img/Perfil-PU.png'></img>
                <p className='tituloP'>Mi perfil</p>
             </div> 
-            <div className='cardPU'>
+            <div className='cardPU' onClick={() => navigate('/tablaUsuario')}>
                <img className='logo-perfil' alt='no aparece' src='/img/Registro-PU.png'></img>
                <p className='tituloP'>Registro de mis citas</p>
             </div> 

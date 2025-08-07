@@ -11,6 +11,7 @@ import Base from './pages/base';
 import PrincipalUsuario from './pages/principalUsuario';
 import ReservarCita from './pages/reservarCita';
 import PerfilUsuario from './pages/perfilUsuario';
+import TablaUsuario from './pages/tablaUsuario';
 
 function App() {
   useEffect(() => {
@@ -59,6 +60,7 @@ function App() {
           <Route path='/principalUsuario' element={<PrincipalUsuario/>}/>
           <Route path='/reservarCita' element={<ReservarCita/>}/>
           <Route path='/perfilUsuario' element={<PerfilUsuario/>}/>
+          <Route path='/tablaUsuario' element={<TablaUsuario/>}/>
        </Routes> 
     </Router>
   );
