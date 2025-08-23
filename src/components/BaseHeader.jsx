@@ -10,7 +10,7 @@ function BaseHeader() {
 
        <ul className="baseheader-links"> 
             <li><a href='/agendarC'>MIS CITAS</a></li>
-            <li><a href='/preguntas'>PREGUNTAS</a></li>
+            <li><a href='/baseBarbero'>PREGUNTAS</a></li>
             <li><a href='/contacto'>CONTACTO</a></li>
             <li><a className='boton-agendar' href="agendarC">AGENDAR</a></li>
 

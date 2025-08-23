@@ -1,0 +1,201 @@
+/* Estos links son para obtener el tipo de letra de Roboto y Saira de los titulos */
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Saira+Extra+Condensed&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Saira+Extra+Condensed:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Saira+Semi+Condensed:wght@500;600;700;800&display=swap');
+
+/* Diseño de la pantalla en general */
+.container-Base-Barbero{
+    background-color: #EDE7E5;
+    background-size: cover;
+    background-position: center 25%; 
+    color: black;
+    position: relative;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;  
+}
+
+
+.saludo-BB{
+    width: 4%;
+    height: auto;
+    position: absolute;
+    left: 48%;
+    top: 13%;
+}
+
+.titulo3-BB{
+    width: 100%;
+    font-family: 'Saira Extra Condensed';
+    font-weight: 700;
+    font-size: 35px;
+    position: absolute;
+    top: 9%;
+    left: 53%;
+    color: black;
+} 
+
+.negro2-BB{
+    color: black;
+}
+
+.amarillo2-BB{
+    color: #986315;
+}
+
+.bigote-general-BB{
+    width: 220px;
+    height: auto;
+    position: absolute;
+    top: 20%;
+    left: 55%;
+}
+
+.frase-BB{
+    font-family: 'Roboto';
+    font-weight: 800;
+    font-size: 16px;
+    position: absolute;
+    top: 26%;
+    left: 51%;
+}
+
+.revisa-BB{
+    width: 50%;
+    height: 40%;
+    position: absolute;
+    top: 35%;
+    left: 38.3%;
+}
+
+.mensaje-BB{
+    color: white;
+    font-family: 'Roboto';
+    font-size: 24px;
+    font-weight: 700;
+    width: 28%;
+    text-align: center;
+    position: absolute;
+    top: 38%;
+    left: 49%;
+}
+
+.btn-revisa-BB{
+    color: white;
+    background-color: #E6A749;
+    font-family: 'Roboto';
+    font-size: 18px;
+    font-weight: 500;
+    position: absolute;
+    top: 59%;
+    left: 54.5%;
+    width: 18%;
+}
+
+.btn-revisa-BB:hover{
+    background-color: white;
+    color: #E6A749;
+    box-shadow: 0 0 10px #FFD700;
+}
+
+.btn-revisa-BB:active{
+    background-color: rgb(255, 255, 255);
+    color: #E6A749;
+    transform: scale(0.97);
+}
+
+.estado-cita-BB{
+    width: 100%;            
+    position: absolute;
+    top: 67%;
+    left: 40.5%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 90px;
+    padding: 10px 0;       /* Padding de arriba y abajo */
+    box-sizing: border-box;
+}
+
+.cuadro-BB{
+    background-color: white;
+    width: 100px;
+    height: 50px;
+    margin-top: 4.5%;
+    margin-left: -2%;
+    margin-right: 2%;
+    border: 3.5px solid #986315;
+    padding: 40px;
+    transition: all 0.3s ease-in-out;
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+    text-align: center;
+    position: relative; 
+    overflow: hidden;   /* Evita que se salga la imagen */
+    color: black;  
+}
+
+/* .cuadro-BB::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background: linear-gradient(
+    120deg,
+    rgba(255, 220, 150, 0.7),
+    rgba(230, 167, 73, 0.8),
+    rgba(213, 137, 84, 0.8)
+    );
+    z-index: 0;
+    transition: width 0.4s ease-in-out;
+}
+ */
+.cuadro-BB:hover::after{
+    width: 100%;
+    color: white;
+}
+
+.cuadro-BB > * {
+    position: relative;
+    z-index: 1;
+}
+
+.logo-cita-BB{
+    width: 25%;
+    height: auto;
+    position: absolute;
+    top: 40%;
+    left: 10%;
+}
+
+.subtitulo-cita-BB{
+    width: 100%;
+    font-family: 'Roboto';
+    font-size: 17px;
+    font-weight: 700;
+    position: absolute;
+    top: 1%;
+    left: 2%;
+}
+
+.numero-cita-BB{
+    font-family: 'Roboto';
+    font-size: 28px;
+    font-weight: 700;
+    color: #986315;
+    position: absolute;
+    top: 21%;
+    left: 50%;
+}
