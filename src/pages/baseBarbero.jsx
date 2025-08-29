@@ -9,6 +9,7 @@ function baseBarbero() {
     <div className='container-Base-Barbero'> 
        {/* Aqui puse el otro componente, es el encabezado simple */}
        <HeaderBarbero/>
+       {/* Aqui puse el componente que es la barra lateral del barbero */}
        <BarraGeneral/>
 
        

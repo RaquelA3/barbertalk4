@@ -1,7 +1,10 @@
 import React from "react";
 import './BarraGeneral.css';
+import { useNavigate } from 'react-router-dom';
 
 function BarraGeneral() {
+   const navigate = useNavigate();
+   
   return (
        <div className='barra-lateral-BB'>
            <img className='usuario-barbero-BB' alt='no aparece' src='/img/Datos-perfilU.png'></img>
@@ -14,7 +17,7 @@ function BarraGeneral() {
            <div className='menu-BB'>
                <h2 className='titulo2-BB'>Menu de navegación:</h2>
                
-               <div className='opcion-BB'>
+               <div className='opcion-BB' onClick={() => navigate('/tablaBarbero')}>
                   <img className='img-registro-BB' alt='no aparece' src='/img/Registro-PU.png'></img>
                   <p className='subtitulo-registro-BB'>Registro de citas.</p>
                </div>

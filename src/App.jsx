@@ -13,6 +13,7 @@ import ReservarCita from './pages/reservarCita';
 import PerfilUsuario from './pages/perfilUsuario';
 import TablaUsuario from './pages/tablaUsuario';
 import BaseBarbero from './pages/baseBarbero';
+import TablaBarbero from './pages/tablaBarbero';
 
 function App() {
   useEffect(() => {
@@ -63,6 +64,8 @@ function App() {
           <Route path='/perfilUsuario' element={<PerfilUsuario/>}/>
           <Route path='/tablaUsuario' element={<TablaUsuario/>}/>
           <Route path='/baseBarbero' element={<BaseBarbero/>}/>
+          <Route path='/tablaBarbero' element={<TablaBarbero/>}/>
+          
        </Routes> 
     </Router>
   );
