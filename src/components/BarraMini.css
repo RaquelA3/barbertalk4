@@ -41,14 +41,25 @@
 /* Este es el menu de navegacion de la barra lateral */
 /* Esto mueve la parte del menu de manera mini */
 .menu-MB{
-    margin-top: -7%;
+    margin-top: -22%;
 }
+
+
+/* Esto es el titulo de "menu" */
+.titulo-menu-MB{
+    color: #986315;
+    font-family: 'Roboto';
+    font-size: 12px;
+    font-weight: 500;
+    margin-left: 25%;
+    margin-top: 40%;
+}
+
 
 /* Esta parte es la de los iconos del menu */
 .img-registro-MB,
 .img-perfil-MB,
-.img-estadisticas-MB,
-.img-casa-MB{
+.img-estadisticas-MB{
     width: 40px;
     height: auto;
     margin-left: -90%;
@@ -56,12 +67,21 @@
     margin-bottom: 50px;
 }
 
-.img-cerrar-MB{
-    width: 8%;
+.img-casa-MB{
+    width: 32px;
     height: auto;
-    margin-left: 10%;
+    margin-left: -90%;
+    margin-top: -5.5%;
+    margin-bottom: 50px; 
+}
+
+.img-cerrar-MB{
+    width: 92%;
+    height: auto;
+    margin-left: -65%;
     margin-top: -10%;
 }
+
 
 
 /* Efectos del menu de navegacion del barbero */
@@ -69,9 +89,9 @@
     width: 32px;
     height: 0px;
     margin-top: 2%;
-    margin-left: -1%;
+    margin-left: -10%;
     margin-right: 2%;
-    padding: 20px;
+    padding: 40px;
     transition: all 0.3s ease-in-out;
     background-size: cover;
     background-position: center;
@@ -100,7 +120,7 @@
 }
 
 .opcion-MB:hover::after{
-     width: 100%;
+     width: 70%;
 }
 /* Puse esto para que cambien las letras a color blanco cuando se pase el cursor */
 .opcion-BB:hover .subtitulo-registro-BB,

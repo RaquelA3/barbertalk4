@@ -1,0 +1,117 @@
+/* Estos links son para obtener el tipo de letra de Roboto y Saira de los titulos */
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Saira+Extra+Condensed&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Saira+Extra+Condensed:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Saira+Semi+Condensed:wght@500;600;700;800&display=swap');
+
+/* Esto es todo el estilo de la pantalla de tablaBarbero */
+.container-Tabla-Barbero{
+    background-color: #EDE7E5;
+    background-size: cover;
+    background-position: center 25%; 
+    color: black;
+    position: relative;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;    
+}
+
+/* Esto acomodo el componente de BarraMini en la pantalla */
+.componente-BarraMini{
+    margin-left: -95.5%;
+    margin-top: 37%;
+}
+
+.imagen-tablaTB{
+    width: 5%;
+    height: auto;
+    position: relative;
+    top: -565px;
+    margin-left: 34.5%; 
+}
+
+.Titulo-tablaTB{
+    font-family: 'Saira Extra Condensed';
+    font-weight: 800;
+    position: absolute; 
+    top: 10%;
+    left: 46%;
+    font-size: 35px;
+}
+
+.negro1-tablaTB{
+    color: black;
+}
+
+.ama1-tablaTB{
+    color: #986315;
+}
+
+.Bigote1-tablaTB{
+    width: 196px;
+    height: auto;
+    position: relative;
+    top: -540px;
+    left: -0.1%;
+}
+
+
+
+
+
+/* --------------------------------------------------------- */
+/* Esta parte es solo del diseño de la tabla */
+.contenedor-tabla-citasTB{
+    width: 125%;
+    overflow-x: auto;
+    margin-left: -9%;
+    position: relative;
+    top: -520px;
+}
+
+.tabla-citasTB{
+    width: 100%;
+    border-collapse: collapse;
+    font-family: sans-serif;
+    font-size: 16px;
+    text-align: left;
+}
+
+.tabla-citasTB thead{
+    background-color: #CF7C00;
+    color: white;
+}
+
+.tabla-citasTB th,
+.tabla-citasTB td{
+    border: 2.3px solid #a36200;
+    padding: 12px;
+    min-width: 150px;
+}
+
+.tabla-citasTB th{
+    text-align: center;
+}
+
+.tabla-citasTB td{
+    background-color: white;
+    color: #333;
+}
+
+.tabla-citasTB tbody tr:hover{
+    background-color: white;
+    color: #E6A749;
+    box-shadow: 0 0 10px #FFD700;
+    border: none;
+    outline: none;
+    transform: scale(1);
+}

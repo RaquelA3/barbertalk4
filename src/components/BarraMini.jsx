@@ -1,9 +1,9 @@
 import React from "react";
 import './BarraMini.css';
-/* import { useNavigate } from "react-router-dom"; */
+ import { useNavigate } from "react-router-dom";
 
 function BarraMini() {
-  /*  const navigate = useNavigate(); */
+    const navigate = useNavigate(); 
 
   return (
     <div className="barra-mini-MB">
@@ -12,8 +12,12 @@ function BarraMini() {
            <span className='negro1-MB'>Juan</span> <span className='amarillo1-MB'>Ramirez</span>
        </h2>
 
+       <h3 className="titulo-menu-MB">Menú</h3>
+
+       {/* Esta parte es del menu de navegacion */}
        <div className="menu-MB">
-          <div className="opcion-MB">
+         
+          <div className="opcion-MB" onClick={() => navigate('/baseBarbero')}>
              <img className="img-casa-MB" alt="no aparece" src="/img/casa.png"></img>
           </div>
 
