@@ -5,6 +5,8 @@ import { useNavigate } from 'react-router-dom';
 import BarraGeneral from '../components/BarraGeneral';
 
 function baseBarbero() {
+   const navigate = useNavigate(); 
+   
   return (
     <div className='container-Base-Barbero'> 
        {/* Aqui puse el otro componente, es el encabezado simple */}
@@ -23,7 +25,7 @@ function baseBarbero() {
 
          <img className='revisa-BB' alt='no aparece' src='/img/general-BB.png'></img>
          <h5 className='mensaje-BB'>Revisa tu citas de hoy para comezar a trabajar.</h5>
-         <button className='btn-revisa-BB'>Revisar agenda</button>
+         <button className='btn-revisa-BB' onClick={() => navigate('/tablaBarbero')}>Revisar agenda</button>
        </div> 
 
        <div className='estado-cita-BB'>

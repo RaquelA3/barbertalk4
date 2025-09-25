@@ -1,6 +1,6 @@
 import React, { useState, useEffect} from 'react';
-import HeaderBarbero from '../components/HeaderBarbero';
 import '../styles/tablaBarbero.css';
+import TituloTB from '../components/TituloTB';
 import BarraMini from '../components/BarraMini';
 
 
@@ -8,7 +8,7 @@ function tablaBarbero() {
   return (
     <div className='container-Tabla-Barbero'>
        {/*  Aqui puse el componente del encabezado simple */}
-       <HeaderBarbero/> {/* Titulo pendiente, tengo que cambiarlo por el otro componente de TituloTB------------------(PENDIENTE) */}
+       <TituloTB/> 
        
 
        {/* Aqui puse el componente de la barra lateral mini */}

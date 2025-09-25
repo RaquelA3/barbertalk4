@@ -14,6 +14,8 @@ import PerfilUsuario from './pages/perfilUsuario';
 import TablaUsuario from './pages/tablaUsuario';
 import BaseBarbero from './pages/baseBarbero';
 import TablaBarbero from './pages/tablaBarbero';
+import EstadisticasBarbero from './pages/estadisticasBarbero';
+import PerfilBarbero from './pages/perfilBarbero';
 
 function App() {
   useEffect(() => {
@@ -65,6 +67,8 @@ function App() {
           <Route path='/tablaUsuario' element={<TablaUsuario/>}/>
           <Route path='/baseBarbero' element={<BaseBarbero/>}/>
           <Route path='/tablaBarbero' element={<TablaBarbero/>}/>
+          <Route path='/estadisticasBarbero' element={<EstadisticasBarbero/>}/>
+          <Route path='/perfilBarbero' element={<PerfilBarbero/>}/>
           
        </Routes> 
     </Router>

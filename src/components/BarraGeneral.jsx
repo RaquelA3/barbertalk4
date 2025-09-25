@@ -22,12 +22,12 @@ function BarraGeneral() {
                   <p className='subtitulo-registro-BB'>Registro de citas.</p>
                </div>
 
-               <div className='opcion-BB'>
+               <div className='opcion-BB' onClick={() => navigate('/perfilBarbero')}>
                   <img className='img-perfil-BB' alt='no aparece' src='/img/Perfil-PU.png'></img>
                   <p className='subtitulo-perfil-BB'>Revisar mi perfil.</p>
                </div>
                
-               <div className='opcion-BB'>
+               <div className='opcion-BB' onClick={() => navigate('/estadisticasBarbero')}>
                   <img className='img-estadisticas-BB' alt='no aparece' src='/img/Estadisticas-PU.png'></img>
                   <p className='subtitulo-estadisticas-BB'>Mis estadisticas.</p>
                </div>
