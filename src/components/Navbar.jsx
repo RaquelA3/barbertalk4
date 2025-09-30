@@ -15,7 +15,7 @@ function Navbar() {
             <li><a href='/contacto'>CONTACTO</a></li>
             <li><a className='boton-agendar' href='/registro'>AGENDAR </a></li>
             
-            <a href='/registro'><img src="/img/calendario.png" alt="Logo calendario" className="calendario" /></a>
+            <a href='/iniciosesionBarbero'><img src="/img/calendario.png" alt="Logo calendario" className="calendario" /></a>
             
 
         </ul>
