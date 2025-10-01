@@ -27,11 +27,6 @@ function BarraGeneral() {
                   <p className='subtitulo-perfil-BB'>Revisar mi perfil.</p>
                </div>
                
-               <div className='opcion-BB' onClick={() => navigate('/estadisticasBarbero')}>
-                  <img className='img-estadisticas-BB' alt='no aparece' src='/img/Estadisticas-PU.png'></img>
-                  <p className='subtitulo-estadisticas-BB'>Mis estadisticas.</p>
-               </div>
-
                <div className='opcion-BB'>
                   <img className='img-cerrar-BB' alt='no aparece' src='/img/cerrar-sesion.png'></img>
                   <p className='subtitulo-cerrar-BB'>Cerrar sesión.</p>

@@ -28,11 +28,7 @@ function BarraMini() {
           <div className="opcion-MB" onClick={() => navigate('/perfilBarbero')}>
              <img className='img-perfil-MB' alt='no aparece' src='/img/Perfil-PU.png'></img>
           </div>
-
-          <div className="opcion-MB" onClick={() => navigate('/estadisticasBarbero')}>
-             <img className='img-estadisticas-MB' alt='no aparece' src='/img/Estadisticas-PU.png'></img>
-          </div>
-
+          
           <div className="opcion-MB">
              <img className='img-cerrar-MB' alt='no aparece' src='/img/cerrar-sesion.png'></img>
           </div>

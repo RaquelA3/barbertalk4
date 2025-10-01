@@ -41,7 +41,7 @@
 /* Este es el menu de navegacion de la barra lateral */
 /* Esto mueve la parte del menu de manera mini */
 .menu-MB{
-    margin-top: -22%;
+    margin-top: -20%;
 }
 
 
@@ -52,7 +52,7 @@
     font-size: 12px;
     font-weight: 500;
     margin-left: 25%;
-    margin-top: 40%;
+    margin-top: 70%;
 }
 
 
