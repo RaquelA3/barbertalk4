@@ -12,7 +12,7 @@ function Navbar() {
             <li><a href='/registro'>REGISTRARSE</a></li>
             <li><a href='/iniciosesion'>INICIAR SESIÓN</a></li>
             <li><a href='/preguntas'>PREGUNTAS</a></li>
-            <li><a href='/contacto'>CONTACTO</a></li>
+            <li><a href='/principalAdmin'>CONTACTO</a></li>
             <li><a className='boton-agendar' href='/registro'>AGENDAR </a></li>
             
             <a href='/iniciosesionBarbero'><img src="/img/calendario.png" alt="Logo calendario" className="calendario" /></a>

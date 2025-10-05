@@ -1,0 +1,177 @@
+/* Estos links son para obtener el tipo de letra de Roboto y Saira de los titulos */
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Saira+Extra+Condensed&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Saira+Extra+Condensed:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Saira+Semi+Condensed:wght@500;600;700;800&display=swap');
+
+
+/* ------------------------------------------------- */
+/* Esto es de la parte de la barra lateral del Administrador */
+.menu-lateral-MA{
+    position: fixed;
+    width: 320px;
+    height: 700px;
+    margin-top: -23.6%;
+    margin-left: 0%;
+    background-color: #462B03;
+}
+
+.bigote-titulo-MA{
+    width: 60px;
+    height: auto;
+    position: relative;
+    margin-left: 12%;
+    top: 10%;
+}
+
+.titulo1-MA{
+    font-family: 'Roboto Condensed';
+    font-weight: 700;
+    font-size: 33px;
+    margin-top: -17%;
+    margin-left: 50%;
+    transform: translateX(9%); /* centra exactamente */
+}
+
+.titulo2-MA{
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 20px;
+    text-transform: none;
+    color: white;
+    margin-top: 7%;
+}
+
+.linea-MA{
+    color: white;
+    background-color: white;
+    width: 75%;
+    height: 1.5px;
+    margin-top: -3%;
+}
+
+.sub1-MA{
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 12px;
+    color: #D0D0D0;
+    margin-left: 13%;
+}
+
+/* Esta es la parte de los iconos del menu del administrador */
+.img-configuracion-MA,
+.img-registro-MA,
+.img-perfil-MA,
+.img-estadisticas-MA,
+.img-agregar-MA,
+.img-trabajadores-MA{
+    width: 37px;
+    height: auto;
+    margin-left: 10%;
+    margin-bottom: -10%;
+    margin-top: 5%;
+}
+
+.img-cerrarS-MA{
+    width: 30px;
+    height: auto;
+    margin-left: 10%;
+    margin-top: 15%;
+}
+
+
+
+/* Esta es la parte del nombre de los botones */
+.subtitulo-configuracion-MA,
+.subtitulo-registro-MA,
+.subtitulo-perfil-MA,
+.subtitulo-estadisticas-MA,
+.subtitulo-agregar-MA,
+.subtitulo-trabajadores-MA{
+    color: white;
+    font-family: 'Roboto';
+    font-weight: 500;
+    position: relative;
+    margin-left: 10%;
+    margin-top: 15%;
+    margin-bottom: -1%;
+    text-align: left;
+}
+
+.subtitulo-cerrarS-MA{
+    color: white;
+    font-family: 'Roboto';
+    font-weight: 500;
+    position: relative;
+    margin-left: 12%;
+    margin-top: 15%;
+    margin-bottom: 1%;
+    text-align: left;
+}
+
+.opcion-MA {
+    width: 315px;
+    height: 100px;
+    margin-top: -12%;
+    margin-left: -1%;
+    margin-right: 2%;
+    padding: 1px 5px; /* usa padding vertical más consistente */
+    transition: all 0.3s ease-in-out;
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+    text-align: left; /* más lógico para texto + icono */
+    position: relative; 
+    overflow: hidden;   /* evita que el efecto se salga */
+    color: black;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.opcion-MA::after {
+    content: "";
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 0%;
+    height: 50px;
+    background: linear-gradient(
+        120deg,
+        rgba(255, 220, 150, 0.7),
+        rgba(230, 167, 73, 0.8),
+        rgba(213, 137, 84, 0.8)
+    );
+    z-index: 0;
+    transition: width 0.4s ease-in-out;
+}
+
+.opcion-MA:hover::after {
+    width: 100%;
+}
+
+
+/* Puse esto para que cambien las letras a color blanco cuando se pase el cursor */
+.opcion-MA:hover .subtitulo-configuracion-MA,
+.opcion-MA:hover .subtitulo-registro-MA,
+.opcion-MA:hover .subtitulo-perfil-MA,
+.opcion-MA:hover .subtitulo-estadisticas-MA,
+.opcion-MA:hover .subtitulo-agregar-MA,
+.opcion-MA:hover .subtitulo-trabajadores-MA,
+.opcion-MA:hover .subtitulo-cerrarS-MA{
+   color: white;
+}
+
+.opcion-MA:hover::after{
+    color: white;
+}
+
+.opcion-MA:hover img {
+    filter: brightness(0) invert(1); /* hace que las imágenes también se vean blancas */
+}
+
+.opcion-MA > *{
+    position: relative;
+    z-index: 1;
+}
