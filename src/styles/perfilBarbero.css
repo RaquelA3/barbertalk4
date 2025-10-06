@@ -51,6 +51,134 @@
     box-sizing: border-box;
     border: 3.8px solid #986315;
 }
+.panel-citas-barbero {
+  background-color: #603913;
+  color: #fff;
+  padding: 20px;
+  width: 30%;
+  height: 96%;
+  text-align: center;
+  border-radius: 6px;
+}
+
+.imagen-panel-barbero {
+  width: 50%;
+  border-radius: 4px;
+}
+
+.panel-citas-barbero h3 {
+  margin-top: 15px;
+  font-size: 1rem;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  margin-right: 20%;
+  margin-left: 20%;
+  font-weight: 700;
+}
+
+.panel-citas-barbero p {
+  margin: 10px 0;
+  color: #d9a15c;
+  font-weight: bold;
+}
+
+.panel-citas-barbero span {
+  display: block;
+  font-size: 1.4rem;
+  color: #ffb347;
+}
+
+/* Formulario */
+.formulario-datos-barbero {
+  flex: 1;
+  margin-left: 40px;
+}
+
+/* Secciones */
+.seccion-formulario {
+  background-color: #b1b0b0;
+  padding: 10px;
+  margin-bottom: 15px;
+}
+
+.seccion-formulario h3 {
+  font-weight: bold;
+  margin-bottom: 5px;
+  width: 75%;
+  font-size: 20px;
+  margin: 0 auto;
+  margin-left: 0%;
+  color: #000000;
+}
+
+.seccion-formulario label {
+  width: 200px;
+  font-weight: 500;
+  margin-top: 1px;
+  color: #000000;
+}
+
+.seccion-formulario input {
+  width: 70%;
+  padding: 8px;
+  border: none;
+  border-radius: 4px;
+  height: 8px;
+  background-color: #fff;
+  margin-top: 3px;
+}
+
+/* Contenedor horizontal */
+.campo-formulario-56 {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+/* Botón */
+.boton-guardar-cambios {
+  background-color: #c9822e;
+  color: #fff;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.boton-guardar-cambios:hover {
+  background-color: #a5661e;
+}
+
+.titulo-datos-barbero {
+  font-family: 'Saira Semi Condensed';
+  font-size: 32px;
+  font-weight: 700;
+  color: #603913;
+  padding-left: 5%;
+  padding-right: 20%;
+  text-align: center;
+  margin-top: 1%;
+  margin-bottom: 0%;
+  
+}
+
+.negro1-perfilU{
+    color: black;
+}
+
+.imagenTijeras-perfilU{
+    margin-left: 0%;
+    margin-top: 0%;
+    width: 5%;
+    height: auto;
+}
+
+.separador-cabecera-formulario{
+    display: flex;
+}
 
 /* .cuadro-foto-detalles{
     
