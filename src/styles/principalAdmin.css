@@ -1,0 +1,181 @@
+/* Estos links son para obtener el tipo de letra de Roboto y Saira de los titulos */
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Saira+Extra+Condensed&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Saira+Extra+Condensed:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Saira+Semi+Condensed:wght@500;600;700;800&display=swap');
+
+.container-Base-Administrador{
+    background-color: #EDE7E5;
+    background-size: cover;
+    background-position: center 25%;
+    color: black;
+    position: relative;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+
+}
+
+.acomodo-menuAdmin{
+    position: relative;
+    margin-top: 23.5%;
+} 
+
+.saludo-Admin{
+    width: 4%;
+    height: auto;
+    position: absolute;
+    left: 48%;
+    top: 13%;
+}
+
+.titulo1-Admin{
+    width: 100%;
+    font-family: 'Saira Extra Condensed';
+    font-weight: 700;
+    font-size: 35px;
+    position: absolute;
+    top: 11%;
+    left: 15%;
+    color: black;
+}
+
+.negro-Admin{
+    color: black;
+}
+
+.amarillo-Admin{
+    color: #986315;
+}
+
+.bigote-principal-Admin{
+    width: 200px;
+    height: auto;
+    position: absolute;
+    top: 18%;
+    left: 55%;
+}
+
+
+/* Este es el estilo del cuadro negro */
+.cuadro-negro-Admin{
+    background-color: black;
+    width: 65%;
+    height: 220px;
+    margin-left: 28%;
+    margin-top: -13%;
+    border: 3.5px solid #986315;
+}
+
+.mensaje-Admin{
+    font-family: 'Roboto';
+    font-weight: 400;
+    width: 55%;
+    text-transform: none;
+    font-size: 30px;
+    margin-left: 23%;
+    margin-top: 1.5%;
+}
+
+/* Estilos del boton y tambien su efecto */
+.btn-revisa-Admin{
+    color: white;
+    background-color: #E6A749;
+    font-family: 'Roboto';
+    font-size: 18px;
+    font-weight: 500;
+    position: absolute;
+    top: 43%;
+    left: 51%;
+    width: 18%;
+}
+
+.btn-revisa-Admin:hover{
+    background-color: white;
+    color: #E6A749;
+    box-shadow: 0 0 10px #FFD700;
+}
+
+.btn-revisa-Admin:active{
+    background-color: rgb(255, 255, 255);
+    color: #E6A749;
+    transform: scale(0.97);
+}
+
+
+/* Estilo del cuadro de trabjadores */
+.cuadro-trabajores-Admin{
+    background-color: white;
+    border: 3.5px solid #986315;
+    margin-top: 2%;
+    margin-left: 28%;
+    width: 45%;
+    height: 260px;
+}
+
+.titulo2-Admin{
+    font-family: 'Roboto';
+    font-weight: 800;
+    font-size: 20px;
+    color: black;
+    margin-left: 52%;
+    width: 100%;
+}
+
+.logo-Trabajadores-Admin{
+    width: 32%;
+    height: auto;
+    margin-left: 7%;
+    margin-top: -6.5%;
+}
+
+.lista-trabajador-Admin{
+    margin-top: -27%;
+}
+
+.nombre-trabajador-Admin{
+    font-family: 'Roboto';
+    font-weight: 300;
+    font-size: 20px;
+    color: black;
+    margin-left: 52%;
+    margin-top: -2%;
+    width: 100%;
+}
+
+
+/* Estilos del cuadro de estadisticas admini */
+.cuadro-estadisticas-Admin{
+    background-color: white;
+    border: 3.5px solid #986315;
+    margin-top: -17.9%;
+    margin-left: 76%;
+    width: 17%;
+    height: 260px;
+    
+}
+
+.titulo3-Admin{
+    font-family: 'Roboto';
+    font-weight: 800;
+    font-size: 20px;
+    color: black;
+    margin-left: 40%;
+    margin-top: 7%;
+    width: 20%;
+    text-align: center;
+    display: flex;
+    justify-content: center
+}
+
+.logo-estadisticas-Admin{
+    width: 75%;
+    height: auto;
+    margin-left: 12%;
+    margin-top: -15%;
+}

@@ -17,6 +17,7 @@ import TablaBarbero from './pages/tablaBarbero';
 import EstadisticasBarbero from './pages/estadisticasBarbero';
 import PerfilBarbero from './pages/perfilBarbero';
 import IniciosesionBarbero from './pages/iniciosesionBarbero';
+import PrincipalAdmin from './pages/principalAdmin';
 
 function App() {
   useEffect(() => {
@@ -71,6 +72,7 @@ function App() {
           <Route path='/estadisticasBarbero' element={<EstadisticasBarbero/>}/>
           <Route path='/perfilBarbero' element={<PerfilBarbero/>}/>
           <Route path='/iniciosesionBarbero' element={<IniciosesionBarbero/>}/>
+          <Route path='/principalAdmin' element={<PrincipalAdmin/>}/>
           
        </Routes> 
     </Router>
