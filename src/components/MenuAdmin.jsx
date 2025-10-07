@@ -20,12 +20,12 @@ function MenuAdmin() {
        <div className='menu-MA'>
          <h3 className='sub1-MA'>Menu</h3>
 
-         <div className='opcion-MA'>
+         <div className='opcion-MA' onClick={() => navigate('/configuracionAdmin')}>
             <img className='img-configuracion-MA' alt='no aparece' src='/img/configuracion.png'></img>  
             <p className='subtitulo-configuracion-MA'>Configuracion</p>
          </div>
 
-         <div className='opcion-MA'>
+         <div className='opcion-MA' onClick={() => navigate('/historialAdmin')}>
             <img className='img-registro-MA' alt='no aparece' src='/img/Registro-PU.png'></img>  
             <p className='subtitulo-registro-MA'>Registro de Citas</p>
          </div>

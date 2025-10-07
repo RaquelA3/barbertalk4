@@ -1,0 +1,111 @@
+/* Estos links son para obtener el tipo de letra de Roboto y Saira de los titulos */
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Saira+Extra+Condensed&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Saira+Extra+Condensed:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Saira+Semi+Condensed:wght@500;600;700;800&display=swap');
+
+.container-historial-Admin{
+    background-color: #EDE7E5;
+    background-size: cover;
+    background-position: center 25%;
+    color: black;
+    position: relative;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.acomodo-historial-Admin{
+    position: relative;
+    margin-top: 23.5%;
+}
+
+
+.logo-historial-Admin{
+    width: 3%;
+    height: auto;
+    position: absolute;
+    left: 48%;
+    top: 13%;
+}
+
+.titulo1-historial-Admin{
+    width: 100%;
+    font-family: 'Saira Extra Condensed';
+    font-weight: 700;
+    font-size: 35px;
+    position: absolute;
+    top: 9.5%;
+    left: 14%;
+    color: black;
+}
+
+.negro-historial-Admin{
+    color: black;
+}
+
+.amarillo-historial-Admin{
+    color: #986315;
+}
+
+.bigote-historial-Admin{
+    width: 200px;
+    height: auto;
+    position: absolute;
+    top: 17%;
+    left: 54%;
+}
+
+
+/* --------------------------------------------------------- */
+/* Esta parte es del estilo de la tabla de Admin */
+.contenedor-tabla-historial-Admin{
+    width: 100%;
+    overflow-x: auto;
+    margin-left: 25%;
+    position: relative;
+    top: -180px;
+}
+
+.tabla-historial-HA{
+    width: 50%;
+    border-collapse: collapse;
+    font-family: sans-serif;
+    font-size: 16px;
+    text-align: left;
+}
+
+.tabla-historial-HA thead{
+    background-color: #CF7C00;
+    color: white;
+}
+
+.tabla-historial-HA th,
+.tabla-historial-HA td{
+    border: 2.3px solid #a36200;
+    padding: 12px;
+    min-width: 150px;
+}
+
+.tabla-historial-HA th{
+    text-align: center;
+}
+
+.tabla-historial-HA td{
+    background-color: white;
+    color: #333;
+}
+
+.tabla-historial-HA tbody tr:hover{
+    background-color: white;
+    color: #E6A749;
+    box-shadow: 0 0 10px #FFD700;
+    border: none;
+    outline: none;
+    transform: scale(1);
+}

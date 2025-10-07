@@ -1,0 +1,322 @@
+/* Estos links son para obtener el tipo de letra de Roboto y Saira de los titulos */
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Saira+Extra+Condensed&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Saira+Extra+Condensed:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Saira+Semi+Condensed:wght@500;600;700;800&display=swap');
+
+.container-config-Admin{
+    background-color: #EDE7E5;
+    background-size: cover;
+    background-position: center 25%;
+    color: black;
+    position: relative;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.acomodo-config-Admin{
+    position: relative;
+    margin-top: 23.5%;
+}
+
+.logo-config-Admin{
+    width: 2.5%;
+    height: auto;
+    position: absolute;
+    left: 48%;
+    top: 13%;
+}
+
+.titulo1-config-Admin{
+    width: 100%;
+    font-family: 'Saira Extra Condensed';
+    font-weight: 700;
+    font-size: 35px;
+    position: absolute;
+    top: 9.5%;
+    left: 15%;
+    color: black;
+}
+
+.negro-config-Admin{
+    color: black;
+}
+
+.amarillo-config-Admin{
+    color: #986315;
+}
+
+.bigote-config-Admin{
+    width: 200px;
+    height: auto;
+    position: absolute;
+    top: 17%;
+    left: 55%;
+}
+
+/* Esta parte es el estilo del cuadro-configuracion-Admin */
+.cuadro-config-Admin{
+    width: 71.5%;
+    max-width: 2000px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 30px;
+    background-color: white;
+    padding: 40px;
+    color: white;
+    margin-top: -12.5%;
+    margin-left: 25%;
+    margin-right: auto;
+    height: 73%;
+    box-sizing: border-box;
+    border: 3.8px solid #986315;
+}
+
+
+
+.titulo2-config-Admin{
+    color: black;
+    font-family: 'Roboto';
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: none;
+    text-align: left;
+}
+
+.sucursal-nohabiles-CA{
+    color: black;
+    font-family: 'Roboto';
+    font-size: 16px;
+    margin-top: -2%;
+}
+
+.sucursal-CA{
+    color: black;
+    background-color: white;
+    font-family: 'Roboto';
+    font-size: 16px;
+    margin-left: 55%;
+    position: relative;
+    top: -40px;
+    width: 45%;
+}
+
+.dia-nohabil-CA{
+    color: black;
+    font-family: 'Roboto';
+    font-size: 16px;
+    margin-top: -7%;
+}
+
+.dia-input-nohabil-CA{
+    color: black;
+    background-color: white;
+    font-family: 'Roboto';
+    font-size: 16px;
+    margin-left: 55%;
+    position: relative;
+    top: -40px;
+    width: 44%;
+}
+
+/*  Esto es para cambiar de color el logo del calendario del input de hora de apertura */
+.dia-input-nohabil-CA::-webkit-calendar-picker-indicator {
+    filter: invert(1); 
+}
+
+.horario-nohabil-CA{
+    color: black;
+    font-family: 'Roboto';
+    font-size: 16px;
+    margin-top: -7%;
+}
+
+.horario-input-nohabil-CA{
+    color: black;
+    background-color: white;
+    font-family: 'Roboto';
+    font-size: 16px;
+    margin-left: 55%;
+    position: relative;
+    top: -40px;
+    width: 44%;
+}
+
+/*  Esto es para cambiar de color el logo de reloj del input de hora de apertura */
+.horario-input-nohabil-CA::-webkit-calendar-picker-indicator {
+    filter: invert(1); 
+}
+
+.boton-guardar-nohabil{
+    position: relative;
+    top: -10px;
+    margin-left: 0%;
+    padding: 10px 75px;
+    border-radius: 12px;
+    background-color: #E6A749;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    border: none;
+    outline: none;
+    font-family: 'Roboto';
+    width: 100%;
+}
+
+.boton-guardar-nohabil:hover{
+    background-color: white;
+    color: #E6A749;
+    box-shadow: 0 0 10px #FFD700;
+    border: none;
+    outline: none;
+}
+
+.boton-guardar-nohabil:active{
+    background-color: rgb(255, 255, 255);
+    color: #E6A749;
+    transform: scale(1.1);
+    border: none;
+    outline: none;
+}
+
+.parte1-cuadro-CA {
+    width: 100%;      /* Ocupa todo el ancho del contenedor */
+    margin-top: 0;    /* Evita desplazamientos negativos */
+    position: relative;
+    left: 0;
+}
+
+.parte2-cuadro-CA {
+    width: 100%;      /* Ocupa todo el ancho también */
+    margin-top: -22px; /* Espacio entre el primer y segundo div */
+    position: relative;
+    left: 0;
+}
+
+.titulo3-config-Admin{
+    color: black;
+    font-family: 'Roboto';
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: none;
+    width: 100%;
+}
+
+.precio-pelo-CA{
+    color: black;
+    font-family: 'Roboto';
+    font-size: 16px;
+    margin-top: -2%;
+}
+
+.input-corte-CA{
+    color: black;
+    background-color: white;
+    font-family: 'Roboto';
+    font-size: 16px;
+    margin-left: 53%;
+    position: relative;
+    top: -40px;
+    width: 37%;
+}
+
+.precio-barba-CA{
+    color: black;
+    font-family: 'Roboto';
+    font-size: 16px;
+    margin-top: -7%;
+}
+
+.input-barba-CA{
+    color: black;
+    background-color: white;
+    font-family: 'Roboto';
+    font-size: 16px;
+    margin-left: 53%;
+    position: relative;
+    top: -40px;
+    width: 37%;
+}
+
+.precio-diseño-CA{
+    color: black;
+    font-family: 'Roboto';
+    font-size: 16px;
+    margin-top: -7%;
+}
+
+.input-diseño-CA{
+    color: black;
+    background-color: white;
+    font-family: 'Roboto';
+    font-size: 16px;
+    margin-left: 53%;
+    position: relative;
+    top: -40px;
+    width: 37%;
+}
+
+.boton-guardar-precio{
+    position: relative;
+    top: -10px;
+    margin-left: 0%;
+    padding: 10px 75px;
+    border-radius: 12px;
+    background-color: #E6A749;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    border: none;
+    outline: none;
+    font-family: 'Roboto';
+    width: 94%;
+}
+
+.boton-guardar-precio:hover{
+    background-color: white;
+    color: #E6A749;
+    box-shadow: 0 0 10px #FFD700;
+    border: none;
+    outline: none;
+}
+
+.boton-guardar-precio:active{
+    background-color: rgb(255, 255, 255);
+    color: #E6A749;
+    transform: scale(1.1);
+    border: none;
+    outline: none;
+}
+
+.imagen-config-Admin{
+    margin-right: -0.5%;
+    margin-top: -1.4%;
+    width: 33%;
+}
+
+.relleno-config-Admin{
+    width: 40%;
+    height: 20%;
+    position: absolute;
+    top: 71%;
+    left: 28%;
+    filter: brightness(50%);
+}
+
+.linea-vertical-CA{
+    width: 1px;              /* grosor de la línea */
+    height: 230px;           /* largo de la línea */
+    background-color: #afadad;
+    position: absolute;
+    left: 49%;
+    top: 29%;
+}

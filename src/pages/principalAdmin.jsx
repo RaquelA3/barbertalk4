@@ -2,7 +2,6 @@ import React, { useState, useEffect} from 'react';
 import MenuAdmin from '../components/MenuAdmin';
 import '../styles/principalAdmin.css';
 import { useNavigate } from 'react-router-dom';
-import HeaderBarbero from '../components/HeaderBarbero';
 import HeaderAdmin from '../components/HeaderAdmin';
 
 function principalAdmin() {

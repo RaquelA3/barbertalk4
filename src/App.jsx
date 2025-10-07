@@ -18,6 +18,8 @@ import EstadisticasBarbero from './pages/estadisticasBarbero';
 import PerfilBarbero from './pages/perfilBarbero';
 import IniciosesionBarbero from './pages/iniciosesionBarbero';
 import PrincipalAdmin from './pages/principalAdmin';
+import ConfiguracionAdmin from './pages/configuracionAdmin';
+import HistorialAdmin from './pages/historialAdmin';
 
 function App() {
   useEffect(() => {
@@ -73,6 +75,8 @@ function App() {
           <Route path='/perfilBarbero' element={<PerfilBarbero/>}/>
           <Route path='/iniciosesionBarbero' element={<IniciosesionBarbero/>}/>
           <Route path='/principalAdmin' element={<PrincipalAdmin/>}/>
+          <Route path='/configuracionAdmin' element={<ConfiguracionAdmin/>}/>
+          <Route path='/historialAdmin' element={<HistorialAdmin/>}/>
           
        </Routes> 
     </Router>
