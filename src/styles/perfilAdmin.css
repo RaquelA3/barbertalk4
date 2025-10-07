@@ -1,0 +1,62 @@
+/* Estos links son para obtener el tipo de letra de Roboto y Saira de los titulos */
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Saira+Extra+Condensed&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Saira+Extra+Condensed:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Saira+Semi+Condensed:wght@500;600;700;800&display=swap');
+
+.container-perfilAdmin{
+    background-color: #EDE7E5;
+    background-size: cover;
+    background-position: center 25%;
+    color: black;
+    position: relative;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.acomodo-perfil-Admin{
+    position: relative;
+    margin-top: 23.5%;
+}
+
+.logo-perfilAdmin{
+    width: 2.5%;
+    height: auto;
+    position: absolute;
+    left: 48%;
+    top: 13%;
+}
+
+.titulo1-perfilAdmin{
+    width: 100%;
+    font-family: 'Saira Extra Condensed';
+    font-weight: 700;
+    font-size: 35px;
+    position: absolute;
+    top: 9.5%;
+    left: 13.5%;
+    color: black;
+}
+
+.negro-perfil-Admin{
+    color: black;
+}
+
+.amarillo-perfil-Admin{
+    color: #986315;
+}
+
+.bigote-perfil-Admin{
+    width: 200px;
+    height: auto;
+    position: absolute;
+    top: 17%;
+    left: 55%;
+}
+

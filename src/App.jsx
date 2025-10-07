@@ -20,6 +20,7 @@ import IniciosesionBarbero from './pages/iniciosesionBarbero';
 import PrincipalAdmin from './pages/principalAdmin';
 import ConfiguracionAdmin from './pages/configuracionAdmin';
 import HistorialAdmin from './pages/historialAdmin';
+import PerfilAdmin from './pages/perfilAdmin';
 
 function App() {
   useEffect(() => {
@@ -77,6 +78,7 @@ function App() {
           <Route path='/principalAdmin' element={<PrincipalAdmin/>}/>
           <Route path='/configuracionAdmin' element={<ConfiguracionAdmin/>}/>
           <Route path='/historialAdmin' element={<HistorialAdmin/>}/>
+          <Route path='/perfilAdmin' element={<PerfilAdmin/>}/>
           
        </Routes> 
     </Router>

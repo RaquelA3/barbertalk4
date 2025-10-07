@@ -30,7 +30,7 @@ function MenuAdmin() {
             <p className='subtitulo-registro-MA'>Registro de Citas</p>
          </div>
 
-         <div className='opcion-MA'>
+         <div className='opcion-MA' onClick={() => navigate('/perfilAdmin')}>
             <img className='img-perfil-MA' alt='no aparece' src='/img/Perfil-PU.png'></img>  
             <p className='subtitulo-perfil-MA'>Mi perfil</p>
          </div>
