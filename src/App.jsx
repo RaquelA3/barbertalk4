@@ -21,6 +21,9 @@ import PrincipalAdmin from './pages/principalAdmin';
 import ConfiguracionAdmin from './pages/configuracionAdmin';
 import HistorialAdmin from './pages/historialAdmin';
 import PerfilAdmin from './pages/perfilAdmin';
+import EstadisticasAdmin from './pages/estadisticasAdmin';
+import AgregarBarbero from './pages/agregarBarbero';
+import ListaTrabajadores from './pages/listaTrabajadores';
 
 function App() {
   useEffect(() => {
@@ -79,6 +82,9 @@ function App() {
           <Route path='/configuracionAdmin' element={<ConfiguracionAdmin/>}/>
           <Route path='/historialAdmin' element={<HistorialAdmin/>}/>
           <Route path='/perfilAdmin' element={<PerfilAdmin/>}/>
+          <Route path='/estadisticasAdmin' element={<EstadisticasAdmin/>}/>
+          <Route path='/agregarBarbero' element={<AgregarBarbero/>}/>
+          <Route path='/listaTrabajadores' element={<ListaTrabajadores/>}/>
           
        </Routes> 
     </Router>

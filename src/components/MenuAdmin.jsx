@@ -35,17 +35,17 @@ function MenuAdmin() {
             <p className='subtitulo-perfil-MA'>Mi perfil</p>
          </div>
 
-         <div className='opcion-MA'>
+         <div className='opcion-MA' onClick={() => navigate('/estadisticasAdmin')}>
             <img className='img-estadisticas-MA' alt='no aparece' src='/img/Estadisticas-PU.png'></img>  
             <p className='subtitulo-estadisticas-MA'>Estadisticas</p>
          </div>
 
-         <div className='opcion-MA'>
+         <div className='opcion-MA' onClick={() => navigate('/agregarBarbero')}>
             <img className='img-agregar-MA' alt='no aparece' src='/img/AgregarB.png'></img>  
             <p className='subtitulo-agregar-MA'>Agregar barbero</p>
          </div>
 
-         <div className='opcion-MA'>
+         <div className='opcion-MA'  onClick={() => navigate('/listaTrabajadores')}>
             <img className='img-trabajadores-MA' alt='no aparece' src='/img/trabajadores.png'></img>  
             <p className='subtitulo-trabajadores-MA'>Mis trabajadores</p>
          </div>

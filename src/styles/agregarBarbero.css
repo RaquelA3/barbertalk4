@@ -1,0 +1,111 @@
+/* Estos links son para obtener el tipo de letra de Roboto y Saira de los titulos */
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Saira+Extra+Condensed&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Saira+Extra+Condensed:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Saira+Semi+Condensed:wght@500;600;700;800&display=swap');
+
+.container-agregar-Admin{
+    background-color: #EDE7E5;
+    background-size: cover;
+    background-position: center 25%;
+    color: black;
+    position: relative;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.acomodo-agregar-Admin{
+    position: relative;
+    margin-top: 23.5%;
+}
+
+.logo-agregar-Admin{
+    width: 2.5%;
+    height: auto;
+    position: absolute;
+    left: 50%;
+    top: 13%;
+}
+
+.titulo1-agregar-Admin{
+    width: 100%;
+    font-family: 'Saira Extra Condensed';
+    font-weight: 700;
+    font-size: 35px;
+    position: absolute;
+    top: 9.5%;
+    left: 14%;
+    color: black;
+}
+
+.negro-agregar-Admin{
+    color: black;
+}
+
+.amarillo-agregar-Admin{
+    color: #986315;
+}
+
+.bigote-agregar-Admin{
+    width: 200px;
+    height: auto;
+    position: absolute;
+    top: 17%;
+    left: 54%;
+}
+
+/* -------------------------------------------------------------------- */
+/* Esta parte es el diseño del cuadro de agregar nuevo barbero */
+.cuadro-agregar-Admin{
+    width: 100%;
+    max-width: 1060px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 30px;
+    background-color: white;
+    padding: 40px;
+    color: white;
+    margin-top: -12.5%;
+    margin-left: 25%;
+    margin-right: auto;
+    height: 73%;
+    box-sizing: border-box;
+    border: 3.8px solid #986315;
+}
+
+.titulo2-agregar-Admin{
+    color: black;
+    font-family: 'Roboto';
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: none;
+    text-align: left;
+    width: 100%;
+    margin-top: -3%;
+    margin-left: -2%;
+}
+
+.nombre-agregar-Admin{
+    color: black;
+    font-family: 'Roboto';
+    font-size: 16px;
+    margin-top: 40%;
+}
+
+.input-nombre-AA{
+    color: black;
+    background-color: white;
+    font-family: 'Roboto';
+    font-size: 16px;
+    margin-left: 55%;
+    position: relative;
+    top: -40px;
+    width: 100%;
+}
