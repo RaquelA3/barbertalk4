@@ -5,6 +5,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Saira+Extra+Condensed:wght@400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Saira+Semi+Condensed:wght@500;600;700;800&display=swap');
 
+:root { --header-h: 96px; }
+
+html, body {
+  height: 100%;
+  margin: 0;
+  overflow-x: hidden; /* evita scroll horizontal por 100vw/absolutos */
+}
 .container-perfilAdmin{
     background-color: #EDE7E5;
     background-size: cover;
@@ -12,17 +19,24 @@
     color: black;
     position: relative;
     background-repeat: no-repeat;
-    background-attachment: fixed;
-    width: 100vw;
-    height: 100vh;
+    width: 115.3%;
+     min-height: calc(100vh - var(--header-h)); 
     margin: 0;
-    padding: 0;
+    margin-top: 6%;   
     overflow-x: hidden;
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    column-gap: 24px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding-top: 0;
+    
 }
 
 .acomodo-perfil-Admin{
-    position: relative;
-    margin-top: 23.5%;
+  position: sticky;  
+  grid-column: 1;
+  margin-top: 0;
 }
 
 .logo-perfilAdmin{
@@ -42,6 +56,8 @@
     top: 9.5%;
     left: 13.5%;
     color: black;
+    margin-bottom: 10%;
+    
 }
 
 .negro-perfil-Admin{
@@ -55,8 +71,161 @@
 .bigote-perfil-Admin{
     width: 200px;
     height: auto;
-    position: absolute;
     top: 17%;
     left: 55%;
+    margin-bottom: 50%;
+}
+.menu-lateral-MA {
+    position: fixed;
+    width: 320px;
+    height: 700px;
+    margin-top: -7%;
+    margin-left: 0%;
+    background-color: #462B03;
+}
+
+.general-perfilAdmin{
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 8px 0 16px 0;
+}
+
+.titulo1-perfilAdmin{
+  position: static !important;
+  left: auto; top: auto;
+  margin: 0;
+}
+
+.logo-perfilAdmin{ width: 40px; height: auto; }
+
+.cuadro-datos-Admin{
+  grid-column: 2;
+  width: 100%;   
+  max-width: 1100px;      
+  margin: 0 auto; 
+  padding: 32px;
+  box-sizing: border-box;
+  border: 3.8px solid #986315;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+.panel-citas-Admin {
+  background-color: #603913;
+  color: #fff;
+  padding: 20px;
+  width: 30%;
+  height: 96%;
+  text-align: center;
+  border-radius: 6px;
+}
+
+.imagen-panel-Admin {
+  width: 100%;
+  border-radius: 4px;
+}
+
+.panel-citas-Admin h3 {
+  margin-top: 15px;
+  font-size: 1rem;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  margin-right: 20%;
+  margin-left: 20%;
+  font-weight: 700;
+}
+
+.panel-citas-Admin p {
+  margin: 10px 0;
+  color: #d9a15c;
+  font-weight: bold;
+}
+
+/* Formulario */
+.formulario-datos-Admin {
+  margin-left: 40px;
+  margin-bottom: 60px; /* 🔹 agrega margen inferior */
+  flex: 1; /* permite expandirse si el contenedor usa flex */
+  
+}
+
+/* Secciones */
+.seccion-formulario-Admin {
+  background-color: #b1b0b0;
+  padding: 10px;
+  margin-bottom: 15px;
+}
+
+.seccion-formulario-Admin h3 {
+  font-weight: bold;
+  margin-bottom: 5px;
+  width: 75%;
+  font-size: 20px;
+  margin: 0 auto;
+  margin-left: 0%;
+  color: #000000;
+}
+
+.seccion-formulario-Admin label {
+  width: 200px;
+  font-weight: 500;
+  margin-top: 1px;
+  color: #000000;
+}
+
+.seccion-formulario-Admin input {
+  width: 100%;
+  max-width: 680px;
+  padding: 8px;
+  border: none;
+  border-radius: 4px;
+  height: 8px;
+  background-color: #fff;
+  margin-top: 3px;
+}
+
+/* Contenedor horizontal */
+.campo-formulario-57 {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+/* Botón */
+.boton-guardar-cambios-Admin {
+  background-color: #c9822e;
+  color: #fff;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.boton-guardar-cambios-Admin:hover {
+  background-color: #a5661e;
+}
+
+
+
+.negro1-perfilU{
+    color: black;
+}
+
+.imagenTijeras-perfilU{
+    margin-left: 0%;
+    margin-top: 0%;
+    width: 5%;
+    height: auto;
+}
+
+.separador-cabecera-formulario{
+    display: flex;
 }
 
