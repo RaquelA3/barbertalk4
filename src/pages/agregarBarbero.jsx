@@ -27,56 +27,52 @@ function AgregarBarbero() {
          <img className='bigote-agregar-Admin' alt='no aparece' src='/img/BBigote.png'></img>
        </div>
 
-       <div className='cuadro-agregar-Admin'>
-         <h2 className='titulo2-agregar-Admin'>Escribe los datos del nuevo barbero.</h2>
-          <p className='nombre-agregar-Admin'>Nombre del barbero:</p>
-          <input type='text' className='input-nombre-AA'></input>
- {/*
-          <p className='apellido1-agregar-Admin'>Apellido paterno:</p>
-          <input type='text' className='input-apellido1-AA'></input>
+      <div className='cuadro-agregar-Admin'>
+        <h2 className='titulo2-agregar-Admin'>Escribe los datos del nuevo barbero.</h2>
+       
+        <div className='cuadro-datos'>
+        <div className="campo-AA">
+          <p>Nombre del barbero:</p>
+          <input type='text' className='input-AA' />
+        </div>
 
-          <p className='apellido2-agregar-Admin'>Apellido materno:</p>
-          <input type='text' className='input-apellido2-AA'></input>
+        <div className="campo-AA">
+          <p>Apellido paterno:</p>
+          <input type='text' className='input-AA' />
+        </div>
 
-          <p className='nusaurio-agregar-Admin'>Nombre de usuario:</p>
-          <input type='text' className='input-nusuario-AA'></input>
+        <div className="campo-AA">
+          <p>Apellido materno:</p>
+          <input type='text' className='input-AA' />
+        </div>
 
-          <p className='correo-agregar-Admin'>Correo electronico:</p>
-          <input type='email' className='input-correo-AA'></input>
+        <div className="campo-AA">
+          <p>Nombre de usuario:</p>
+          <input type='text' className='input-AA' />
+        </div>
 
-          <p className='telefono-agregar-Admin'>Numero de telefono:</p>
-          <input type='number' className='input-telefono-AA'></input>
- */}
-{/*           <div className="campo-contraseña-AA" style={{ position: "relative", width: "45%" }}>
-          <p className="contraseña-agregar-Admin">Nueva contraseña:</p>
-          <input
-            type={mostrar ? "text" : "password"}
-            className="input-contraseña-AA"
-            style={{ width: "100%", paddingRight: "35px" }}
-          />
-          <button
-            type="button"
-            onClick={() => setMostrar(!mostrar)}
-            style={{
-              position: "absolute",
-              right: "10px",
-              top: "55%",
-              transform: "translateY(-50%)",
-              background: "none",
-              border: "none",
-              cursor: "pointer",
-              color: "black",
-            }}
-          >
-            {mostrar ? <EyeOff size={18} /> : <Eye size={18} />}
-          </button>
-        </div> */}
+        <div className="campo-AA">
+          <p>Correo electrónico:</p>
+          <input type='email' className='input-AA' />
+        </div>
 
-         <img className='fondo-agregar-Admin' alt='no aparece' src='/img/Fondo-AA.png'></img>
-       </div>
+        <div className="campo-AA">
+          <p>Número de teléfono:</p>
+          <input type='number' className='input-AA' />
+        </div>
+
+        <div className="campo-AA">
+          <button className='boton-agregar-barbero'>Añadir barbero</button>
+        </div>
+
+
+
+        <img className='fondo-agregar-Admin' alt='no aparece' src='/img/Fondo-AA.png' />
+      </div>
+      </div>
 
     </div>
   )
 }
 
-export default AgregarBarbero
+export default AgregarBarbero;

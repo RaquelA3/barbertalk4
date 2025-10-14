@@ -22,7 +22,7 @@
 
 .acomodo-agregar-Admin{
     position: relative;
-    margin-top: 23.5%;
+    margin-top: 23.8%;
 }
 
 .logo-agregar-Admin{
@@ -62,22 +62,26 @@
 
 /* -------------------------------------------------------------------- */
 /* Esta parte es el diseño del cuadro de agregar nuevo barbero */
-.cuadro-agregar-Admin{
+.cuadro-agregar-Admin {
     width: 100%;
     max-width: 1060px;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 30px;
     background-color: white;
-    padding: 40px;
+    border: 3.8px solid #986315;
     color: white;
+    padding: 40px;
     margin-top: -12.5%;
     margin-left: 25%;
     margin-right: auto;
     height: 73%;
     box-sizing: border-box;
-    border: 3.8px solid #986315;
+
+    /* Corrección de layout */
+    display: flex;
+    flex-direction: column; /* antes estaba centrado, ahora apila los campos */
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 20px; /* separación uniforme entre elementos */
+    position: relative; /* por si usas imágenes internas o posición absoluta */
 }
 
 .titulo2-agregar-Admin{
@@ -87,16 +91,18 @@
     font-weight: 700;
     text-transform: none;
     text-align: left;
-    width: 100%;
-    margin-top: -3%;
-    margin-left: -2%;
+    width: 200%;
+    margin-top: -1.5%;
+    margin-left: 0.2%;
 }
 
 .nombre-agregar-Admin{
     color: black;
     font-family: 'Roboto';
     font-size: 16px;
-    margin-top: 40%;
+    margin-top: 1%;
+    margin-left: -72%;
+    width: 100%;
 }
 
 .input-nombre-AA{
@@ -104,8 +110,77 @@
     background-color: white;
     font-family: 'Roboto';
     font-size: 16px;
-    margin-left: 55%;
     position: relative;
-    top: -40px;
+    top: 12px;
+    left: -15%;
     width: 100%;
+}
+
+.campo-AA {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: -18px;
+}
+
+.campo-AA p {
+  font-weight: 500;
+  margin-bottom: 6px;
+  color: #333;
+}
+
+.input-AA {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 16px;
+  width: 210%;
+  background-color: #EDE7E5;
+  color: black;
+}
+
+.cuadro-datos{
+    margin-top: -5%;
+}
+
+.fondo-agregar-Admin{
+    width: 118%;
+    height: auto;
+    position: relative;
+    top: -49%;
+    margin-left: 250%;
+}
+
+
+
+.boton-agregar-barbero{
+    position: relative;
+    top: 30px;
+    margin-left: 55%;
+    padding: 8px 75px;
+    border-radius: 12px;
+    background-color: #E6A749;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    border: none;
+    outline: none;
+    font-family: 'Roboto';
+    width: 100%;
+}
+
+.boton-agregar-barbero:hover{
+    background-color: white;
+    color: #E6A749;
+    box-shadow: 0 0 10px #FFD700;
+    border: none;
+    outline: none;
+}
+
+.boton-agregar-barbero:active{
+    background-color: rgb(255, 255, 255);
+    color: #E6A749;
+    transform: scale(1.1);
+    border: none;
+    outline: none;
 }
