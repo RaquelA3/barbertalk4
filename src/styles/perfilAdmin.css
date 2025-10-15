@@ -19,17 +19,18 @@ html, body {
     color: black;
     position: relative;
     background-repeat: no-repeat;
-    width: 115.3%;
-     min-height: calc(100vh - var(--header-h)); 
+    width: 118.3%;
+    min-height: calc(100vh - var(--header-h)); 
     margin: 0;
-    margin-top: 6%;   
+    margin-top: 8%;   
     overflow-x: hidden;
     display: grid;
     grid-template-columns: 300px 1fr;
     column-gap: 24px;
     overflow-x: hidden;
-    overflow-y: auto;
+    overflow-y: hidden;
     padding-top: 0;
+    margin-top: 6%;
     
 }
 
@@ -58,6 +59,7 @@ html, body {
     color: black;
     margin-bottom: 10%;
     
+    
 }
 
 .negro-perfil-Admin{
@@ -78,10 +80,11 @@ html, body {
 .menu-lateral-MA {
     position: fixed;
     width: 320px;
-    height: 700px;
-    margin-top: -7%;
+    height: 720px;
+    margin-top: -6%;
     margin-left: 0%;
     background-color: #462B03;
+    
 }
 
 .general-perfilAdmin{
@@ -102,7 +105,8 @@ html, body {
 .cuadro-datos-Admin{
   grid-column: 2;
   width: 100%;   
-  max-width: 1100px;      
+  max-width: 1100px; 
+  height: 90%;     
   margin: 0 auto; 
   padding: 32px;
   box-sizing: border-box;
@@ -112,9 +116,10 @@ html, body {
   justify-content: center;
   align-items: flex-start;
   gap: 30px;
-  margin-bottom: 30px;
+  
+  
 }
-.panel-citas-Admin {
+.panel-citas- {
   background-color: #603913;
   color: #fff;
   padding: 20px;
@@ -125,7 +130,7 @@ html, body {
 }
 
 .imagen-panel-Admin {
-  width: 100%;
+  width: 80%;
   border-radius: 4px;
 }
 
