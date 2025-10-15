@@ -22,9 +22,13 @@
 
 .acomodo-menuAdmin{
     position: relative;
-    margin-top: 23.5%;
+    margin-top: 7%;
 } 
 
+/* .general-principalAdmin{
+    position: relative;
+    margin-top: 20%;
+} */
 .saludo-Admin{
     width: 4%;
     height: auto;
@@ -67,7 +71,7 @@
     width: 65%;
     height: 220px;
     margin-left: 28%;
-    margin-top: -13%;
+    margin-top: 11%;
     border: 3.5px solid #986315;
 }
 
