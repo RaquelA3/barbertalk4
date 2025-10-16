@@ -37,7 +37,7 @@ html, body {
 .acomodo-perfil-Admin{
   position: sticky;  
   grid-column: 1;
-  margin-top: 9%;
+  margin-top: 25%;
 }
 
 .logo-perfilAdmin{
@@ -54,12 +54,10 @@ html, body {
     font-weight: 700;
     font-size: 35px;
     position: absolute;
-    top: 9.5%;
+    top: 4%;
     left: 13.5%;
     color: black;
     margin-bottom: 10%;
-    
-    
 }
 
 .negro-perfil-Admin{
@@ -73,7 +71,7 @@ html, body {
 .bigote-perfil-Admin{
     width: 200px;
     height: auto;
-    top: 17%;
+    top: 5%;
     left: 55%;
     margin-bottom: 50%;
 }
@@ -92,21 +90,21 @@ html, body {
   align-items: center;
   gap: 12px;
   margin: 8px 0 16px 0;
+  color: black;
 }
 
-.titulo1-perfilAdmin{
-  position: static !important;
-  left: auto; top: auto;
-  margin: 0;
-}
+
 
 .logo-perfilAdmin{ width: 40px; height: auto; }
 
 .cuadro-datos-Admin{
   grid-column: 2;
+  width: 90%;   
+  max-width: 1100px; 
+  height: 80%;     
   width: 100%;   
   max-width: 1100px; 
-  height: 90%;     
+  height: 80%;     
   margin: 0 auto; 
   padding: 32px;
   box-sizing: border-box;
@@ -116,15 +114,16 @@ html, body {
   justify-content: center;
   align-items: flex-start;
   gap: 30px;
-  
-  
+  margin-bottom: 30px;
+  margin-top: 5%;
+  color: black;
 }
 .panel-citas- {
   background-color: #603913;
-  color: #fff;
+  color: black;
   padding: 20px;
   width: 30%;
-  height: 96%;
+  height: 90%;
   text-align: center;
   border-radius: 6px;
 }
@@ -143,11 +142,13 @@ html, body {
   margin-right: 20%;
   margin-left: 20%;
   font-weight: 700;
+  color: black;
 }
 
 .panel-citas-Admin p {
   margin: 10px 0;
   color: #d9a15c;
+  color: black;
   font-weight: bold;
 }
 
@@ -156,6 +157,7 @@ html, body {
   margin-left: 40px;
   margin-bottom: 60px; /* 🔹 agrega margen inferior */
   flex: 1; /* permite expandirse si el contenedor usa flex */
+  color: black;
   
 }
 
@@ -164,6 +166,7 @@ html, body {
   background-color: #b1b0b0;
   padding: 10px;
   margin-bottom: 15px;
+  color: black;
 }
 
 .seccion-formulario-Admin h3 {
@@ -192,6 +195,7 @@ html, body {
   height: 8px;
   background-color: #fff;
   margin-top: 3px;
+  color: black;
 }
 
 /* Contenedor horizontal */
@@ -199,6 +203,12 @@ html, body {
   display: flex;
   align-items: center;
   margin-bottom: 10px;
+  color: black;
+}
+
+.formulario-PA{
+  color: black;
+  background-color: white;
 }
 
 /* Botón */
@@ -206,11 +216,12 @@ html, body {
   background-color: #c9822e;
   color: #fff;
   border: none;
-  padding: 12px 20px;
+  padding: 12px 70px;
   border-radius: 6px;
   font-weight: bold;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  margin-left: 27%;
 }
 
 .boton-guardar-cambios-Admin:hover {

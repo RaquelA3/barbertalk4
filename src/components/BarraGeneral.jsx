@@ -47,23 +47,37 @@ function BarraGeneral() {
       <div className='menu-BB'>
         <h2 className='titulo2-BB'>Menu de navegación:</h2>
 
-        <div className='opcion-BB' onClick={() => navigate('/tablaBarbero')}>
-          <img className='img-registro-BB' alt='no aparece' src='/img/Registro-PU.png' />
-          <p className='subtitulo-registro-BB'>Registro de citas.</p>
-        </div>
+               <div className='opcion-BB' onClick={() => navigate('/perfilBarbero')}>
+                  <img className='img-perfil-BB' alt='no aparece' src='/img/Perfil-PU.png'></img>
+                  <p className='subtitulo-perfil-BB'>Revisar mi perfil.</p>
+               </div>
+               
+               <div className='opcion-BB' onClick={async () => {
+               try {
+                  const res = await fetch('https://barbertalk-back.onrender.com/logout', {
+                     method: 'POST',
+                     credentials: 'include', // importante para enviar la cookie de sesión
+                  });
 
-        <div className='opcion-BB' onClick={() => navigate('/perfilBarbero')}>
-          <img className='img-perfil-BB' alt='no aparece' src='/img/Perfil-PU.png' />
-          <p className='subtitulo-perfil-BB'>Revisar mi perfil.</p>
-        </div>
+                  if (res.ok) {
+                     alert('Sesión cerrada correctamente');
+                     navigate('/'); // redirige a la pantalla de login o inicio
+                  } else {
+                     alert('Error al cerrar sesión');
+                  }
+               } catch (err) {
+                  console.error('Error al cerrar sesión:', err);
+                  alert('Error del servidor');
+               }
+               }}>
+               <img className='img-cerrar-BB' alt='no aparece' src='/img/cerrar-sesion.png'></img>
+               <p className='subtitulo-cerrar-BB'>Cerrar sesión.</p>
+               </div>
 
-        <div className='opcion-BB' onClick={handleLogout}>
-          <img className='img-cerrar-BB' alt='no aparece' src='/img/cerrar-sesion.png' />
-          <p className='subtitulo-cerrar-BB'>Cerrar sesión.</p>
-        </div>
-      </div>
-    </div>
-  );
+
+           </div>
+       </div>
+  )
 }
 
 export default BarraGeneral;

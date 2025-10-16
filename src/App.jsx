@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+// Cliente
 import Inicio from './pages/inicio';
 import Iniciarsesion from './pages/iniciosesion';
 import Registro from './pages/registro';
@@ -12,6 +13,8 @@ import PrincipalUsuario from './pages/principalUsuario';
 import ReservarCita from './pages/reservarCita';
 import PerfilUsuario from './pages/perfilUsuario';
 import TablaUsuario from './pages/tablaUsuario';
+
+// Trabajador
 import BaseBarbero from './pages/baseBarbero';
 import TablaBarbero from './pages/tablaBarbero';
 import EstadisticasBarbero from './pages/estadisticasBarbero';
@@ -61,6 +64,7 @@ function App() {
     <Router>
        <Routes>
           <Route path='/' element={<Inicio/>}/>
+          {/* // Cliente */}
           <Route path='/iniciosesion' element={<Iniciarsesion/>}/>
           <Route path='/registro' element={<Registro/>}/>
           <Route path='/preguntas' element={<Preguntas/>}/>
@@ -73,6 +77,8 @@ function App() {
           <Route path='/reservarCita' element={<ReservarCita/>}/>
           <Route path='/perfilUsuario' element={<PerfilUsuario/>}/>
           <Route path='/tablaUsuario' element={<TablaUsuario/>}/>
+
+          {/* // Trabajador */}
           <Route path='/baseBarbero' element={<BaseBarbero/>}/>
           <Route path='/tablaBarbero' element={<TablaBarbero/>}/>
           <Route path='/estadisticasBarbero' element={<EstadisticasBarbero/>}/>

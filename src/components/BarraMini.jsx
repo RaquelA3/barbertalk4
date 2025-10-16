@@ -29,9 +29,27 @@ function BarraMini() {
              <img className='img-perfil-MB' alt='no aparece' src='/img/Perfil-PU.png'></img>
           </div>
           
-          <div className="opcion-MB">
-             <img className='img-cerrar-MB' alt='no aparece' src='/img/cerrar-sesion.png'></img>
-          </div>
+          <div className="opcion-MB" onClick={async () => {
+         try {
+            const res = await fetch('https://barbertalk-back.onrender.com/logout', {
+               method: 'POST',
+               credentials: 'include', // importante para enviar la cookie de sesión
+            });
+
+            if (res.ok) {
+               alert('Sesión cerrada correctamente');
+               navigate('/'); // redirige a la pantalla de login o inicio
+            } else {
+               alert('Error al cerrar sesión');
+            }
+         } catch (err) {
+            console.error('Error al cerrar sesión:', err);
+            alert('Error del servidor');
+         }
+         }}>
+         <img className='img-cerrar-MB' alt='no aparece' src='/img/cerrar-sesion.png'></img>
+         </div>
+
        </div>
       
     </div>

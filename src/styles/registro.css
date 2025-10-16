@@ -19,7 +19,7 @@
 .cuadro-registro{
     background-color: #4B3C3C;
     width: 35%;
-    height: 75%;
+    height: 82%;
     border-radius: 3%;
     margin-left: 60%;
     margin-top: 5%;
@@ -69,6 +69,17 @@ h1{
     flex-direction: column;
 }
 
+.fecha-nacimiento-cliente{
+    color: black;
+    background-color: white;
+}
+
+/*  Esto es para cambiar de color el logo de reloj del input de hora de apertura */
+.fecha-nacimiento-cliente::-webkit-calendar-picker-indicator {
+    filter: invert(1); 
+}
+
+
 .boton-registrar{
     display: block;
     width: 100%;
@@ -80,7 +91,9 @@ h1{
     font-size: 18px;
     font-weight: bold;
     
-    margin-left: 50%;
+    margin-left: -50%;
+    position: relative;
+    top: 130%;
     cursor: pointer;
     transition: background-color 0.3s;
 }
@@ -92,8 +105,9 @@ h1{
 
 .cuenta {
     text-align: center;
-    margin-top: -15px;
-    margin-left: 50%;
+    position: relative;
+    top: 150%;
+    margin-left: -45%;
     width: 100%;
 }
 
