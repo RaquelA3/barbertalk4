@@ -27,10 +27,28 @@ function BarraGeneral() {
                   <p className='subtitulo-perfil-BB'>Revisar mi perfil.</p>
                </div>
                
-               <div className='opcion-BB'>
-                  <img className='img-cerrar-BB' alt='no aparece' src='/img/cerrar-sesion.png'></img>
-                  <p className='subtitulo-cerrar-BB'>Cerrar sesión.</p>
+               <div className='opcion-BB' onClick={async () => {
+               try {
+                  const res = await fetch('https://barbertalk-back.onrender.com/logout', {
+                     method: 'POST',
+                     credentials: 'include', // importante para enviar la cookie de sesión
+                  });
+
+                  if (res.ok) {
+                     alert('Sesión cerrada correctamente');
+                     navigate('/'); // redirige a la pantalla de login o inicio
+                  } else {
+                     alert('Error al cerrar sesión');
+                  }
+               } catch (err) {
+                  console.error('Error al cerrar sesión:', err);
+                  alert('Error del servidor');
+               }
+               }}>
+               <img className='img-cerrar-BB' alt='no aparece' src='/img/cerrar-sesion.png'></img>
+               <p className='subtitulo-cerrar-BB'>Cerrar sesión.</p>
                </div>
+
 
            </div>
        </div>

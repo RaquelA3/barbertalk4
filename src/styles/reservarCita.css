@@ -193,6 +193,22 @@
     width: 61%;
 }
 
+.sucursal-titulo{
+    position: relative;
+    left: -18%;
+    top: -22px;
+}
+
+.selecciona-sucursal-R{
+    position: relative;
+    left: 17%;
+    top: -22px;
+    width: 61%;
+    color: black;
+    background-color: white;
+    font-family: 'Roboto';
+    font-size: 15px;
+}
 
 .fechaCita-R{
     position: relative;
@@ -207,45 +223,49 @@
     width: 59.7%;
 }
 
+.barberoE-R{
+    position: relative;
+    left: -42%;
+    top: -50px;
+}
+
+.barbero-seleccionado-R{
+    position: relative;
+    left: 25%;
+    top: -90px;
+    width: 61%;
+}
+
 .horaCita-R{
     position: relative;
     left: -12.3%;
-    top: -22px;
+    top: 12px;
 }
 
 .horaC-R{
     position: relative;
     left: 11.8%;
-    top: -22px;
-    width: 61%;
-}
-
-.barberoE-R{
-    position: relative;
-    left: -42%;
-    top: -22px;
-}
-
-.barbero-seleccionado-R{
-    position: relative;
-    left: 27.2%;
-    top: -59px;
+    top: 12px;
     width: 61%;
 }
 
 .servicio-RC{
     position: relative;
-    left: -32.5%;
-    top: -22px;
+    left: -33%;
+    top: -12px;
     margin-top: -11%;
 }
 
-.servicio-multiselect-R{
+.checkbox-servicios-R{
     position: relative;
-    left: 27.2%;
-    top: -59px;
-    width: 61%;
+    left: -7%;
+    top: -20px;
+    width: 100%;
 }
+
+
+
+
 
 .boton-Reservar-R{
     margin-top: 2%;

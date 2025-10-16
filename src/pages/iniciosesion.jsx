@@ -60,7 +60,7 @@ function Iniciosesion() {
 
         // Espera breve antes de redirigir para asegurar que la cookie se guarde
         setTimeout(() => {
-          navigate('/agendarC');
+          navigate('/principalUsuario');
         }, 100); // 100 ms suele ser suficiente
       }else {
         alert(data.error || 'Los datos ingresados son incorrectos');

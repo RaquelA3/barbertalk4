@@ -26,7 +26,12 @@ function IniciosesionBarbero() {
       .then(data => {
         if (data.sesion && data.trabajador) {
           setBarbero(data.trabajador);
-          navigate('/baseBarbero'); // Redirige si ya está logueado
+          console.log("Tipo desde sesión activa:", data.trabajador.tipo);
+          if (data.trabajador.tipo === "0") {
+            navigate('/baseBarbero');
+          } else if (data.trabajador.tipo === "1") {
+            navigate('/principalAdmin');
+          }
         }
       })
       .catch(err => console.error('Error al verificar sesión:', err));
@@ -48,21 +53,29 @@ function IniciosesionBarbero() {
           'X-CSRF-Token': csrfToken,
         },
         credentials: 'include',
-        body: JSON.stringify(form),
+        body: JSON.stringify({
+          usuario: form.usuario,
+          contraseña: form.contraseña
+        }),
       });
 
       const data = await res.json();
+      console.log("Respuesta login:", data);
 
       if (res.ok && data.trabajador) {
         alert(data.mensaje || 'Inicio de sesión exitoso');
         setBarbero(data.trabajador);
 
-        setTimeout(() => {
+        // Redirigir según tipo
+        if (data.trabajador.tipo === "0") {
           navigate('/baseBarbero');
-        }, 100);
+        } else if (data.trabajador.tipo === "1") {
+          navigate('/principalAdmin');
+        }
+
       } else {
         alert(data.mensaje || 'Los datos ingresados son incorrectos');
-        setForm({ usuario: '', contraseña: '' }); // Limpia el formulario
+        setForm({ usuario: '', contraseña: '' });
       }
 
     } catch (err) {
@@ -76,7 +89,7 @@ function IniciosesionBarbero() {
       <div className="container-inicioS-Barbero">
         <Navbar />
         <div className="cuadro-inicioS-Barbero">
-          <h2>Ya estás logueado como {barbero.nombre || barbero.nom_usuario}. Redirigiendo...</h2>
+          <h2>Ya estás logueado como {barbero.nombre || barbero.usuario}. Redirigiendo...</h2>
         </div>
       </div>
     );
