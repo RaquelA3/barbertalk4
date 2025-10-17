@@ -208,6 +208,7 @@
     width: 80px;
     height: auto;
     margin-top: -2%;
+    margin-left: 10%;
 }
 
 .tituloP{
@@ -226,6 +227,7 @@
 /* Esto hace que la imagen se vuelva mas blanca */
 .cardPU:hover .logo-perfil{
     filter: brightness(10);
+    color: white;
 }
 
 

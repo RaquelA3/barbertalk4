@@ -51,6 +51,12 @@ function BarraGeneral() {
                   <img className='img-perfil-BB' alt='no aparece' src='/img/Perfil-PU.png'></img>
                   <p className='subtitulo-perfil-BB'>Revisar mi perfil.</p>
                </div>
+
+               <div className='opcion-BB' onClick={() => navigate('/estadisticasBarbero')}>
+                  <img className='img-perfil-BB' alt='no aparece' src='/img/Registro-PU.png'></img>
+                  <p className='subtitulo-perfil-BB'>Tabla de citas.</p>
+               </div>
+
                
                <div className='opcion-BB' onClick={async () => {
                try {

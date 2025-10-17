@@ -37,10 +37,30 @@ function principalUsuario() {
                <img className='logo-perfil' alt='no aparece' src='/img/Registro-PU.png'></img>
                <p className='tituloP'>Registro de mis citas</p>
             </div> 
-            <div className='cardPU'>
-               <img className='logo-perfil' alt='no aparece' src='/img/Estadisticas-PU.png'></img>
-               <p className='tituloP'>Estadisticas de mis citas</p>
-            </div> 
+
+            {/* Esto es para cerrar sesion */}
+            <div className='cardPU' onClick={async () => {
+            try {
+               const res = await fetch('https://barbertalk-back.onrender.com/logout', {
+                  method: 'POST',
+                  credentials: 'include', // importante para enviar la cookie de sesión
+               });
+
+               if (res.ok) {
+                  alert('Sesión cerrada correctamente');
+                  navigate('/'); // redirige a la pantalla de login o inicio
+               } else {
+                  alert('Error al cerrar sesión');
+               }
+            } catch (err) {
+               console.error('Error al cerrar sesión:', err);
+               alert('Error del servidor');
+            }
+            }}>
+            <img className='logo-perfil' alt='no aparece' src='/img/cerrar-sesion.png' />
+            <p className='tituloP'>Cerrar sesión</p>
+            </div>
+
         </div>
 
         <div className='lista'>
