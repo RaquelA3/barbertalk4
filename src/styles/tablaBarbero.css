@@ -28,14 +28,14 @@
 /* Esto acomodo el componente de BarraMini en la pantalla */
 .componente-BarraMini{
     margin-left: -95.5%;
-    margin-top: 15%;
+    margin-top: 13.1%;
 }
 
 .imagen-tablaTB{
     width: 5%;
     height: auto;
     position: relative;
-    top: -565px;
+    top: -570px;
     margin-left: 34.5%; 
 }
 
@@ -60,7 +60,7 @@
     width: 196px;
     height: auto;
     position: relative;
-    top: -540px;
+    top: -555px;
     left: -0.1%;
 }
 
@@ -75,7 +75,7 @@
     overflow-x: auto;
     margin-left: -9%;
     position: relative;
-    top: -520px;
+    top: -550px;
 }
 
 .tabla-citasTB{

@@ -52,7 +52,7 @@ function BarraGeneral() {
                   <p className='subtitulo-perfil-BB'>Revisar mi perfil.</p>
                </div>
 
-               <div className='opcion-BB' onClick={() => navigate('/estadisticasBarbero')}>
+               <div className='opcion-BB' onClick={() => navigate('/tablaBarbero')}>
                   <img className='img-perfil-BB' alt='no aparece' src='/img/Registro-PU.png'></img>
                   <p className='subtitulo-perfil-BB'>Tabla de citas.</p>
                </div>
