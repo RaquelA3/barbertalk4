@@ -129,7 +129,18 @@ export default function TablaUsuario() {
                     <td>{formatearFecha(cita.fecha_cita)}</td>
                     <td>{formatearHora(cita.hora_cita)}</td>
                     <td>{clienteNombre}</td>
-                    <td>{cita.servicio_nombre || '—'}</td>
+                    <td>
+                      {cita.servicios_solicitados
+                        ? cita.servicios_solicitados
+                         .split(',')
+                         .map((servicio, index) => (
+                            <span key={index}>
+                              {servicio.trim()}
+                              <br />
+                            </span>
+                          ))
+                      : '—'}
+                    </td>
                     <td>{cita.personal_a_cargo || '—'}</td>
                     <td>{ESTADO_MAP[cita.estado_cita] || 'N/D'}</td>
                   </tr>
