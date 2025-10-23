@@ -26,7 +26,7 @@ function principalAdmin() {
 
          <div className='cuadro-negro-Admin'>
            <h2 className='mensaje-Admin'>Revisa las ultimas citas realizadas hoy.</h2>
-           <button className='btn-revisa-Admin'>Revisar historial</button>
+           <button className='btn-revisa-Admin' onClick={() => navigate('/historialAdmin')}>Revisar historial</button>
          </div>
 
          <div className='cuadro-trabajores-Admin'>
