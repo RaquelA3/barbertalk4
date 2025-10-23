@@ -229,7 +229,6 @@ function PerfilAdmin() {
             <div className="mini-modal-subtitle">con éxito!</div>
 
             <div className="mini-modal-mustache">
-              {/* Ruta de relleno; cámbiala por la real dentro del proyecto */}
               <img src="/img/BBigote.png" alt="moustache" />
             </div>
 
@@ -244,7 +243,6 @@ function PerfilAdmin() {
           </div>
         </div>
       )}
-      {/* ------------------------------------- */}
     </div>
   );
 }
