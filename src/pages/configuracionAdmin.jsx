@@ -3,14 +3,16 @@ import MenuAdmin from '../components/MenuAdmin';
 import HeaderAdmin from '../components/HeaderAdmin';
 import '../styles/configuracionAdmin.css';
 import { useNavigate } from 'react-router-dom';
+import { useEffect } from 'react';
 
-function configuracionAdmin() {
+function ConfiguracionAdmin() {
   const navigate = useNavigate();
 
-  // Estados para inputs
+  // Estados para horarios
   const [fecha, setFecha] = useState('');
   const [hora, setHora] = useState('');
-  const [idSucursal, setIdSucursal] = useState(1); // Siempre es 1
+  const [idSucursal, setIdSucursal] = useState(1);
+  
 
   const handleGuardarHorario = async () => {
     if (!fecha) {
@@ -19,21 +21,18 @@ function configuracionAdmin() {
     }
 
     try {
-      // 1. Obtener CSRF token
       const csrfRes = await fetch('https://barbertalk-back.onrender.com/api/csrf-token', {
         credentials: 'include'
       });
       const csrfData = await csrfRes.json();
       const csrfToken = csrfData.csrfToken;
 
-      // 2. Construir body según si se bloquea hora específica o todo el día
       const body = {
         id_sucursal: idSucursal,
         fecha,
-        hora_inicio: hora ? hora : null // null si bloquea todo el día
+        hora_inicio: hora ? hora : null
       };
 
-      // 3. Petición PUT
       const res = await fetch('https://barbertalk-back.onrender.com/informacioncitas/horario/bloque-deshabilitar', {
         method: 'PUT',
         credentials: 'include',
@@ -48,7 +47,6 @@ function configuracionAdmin() {
 
       if (res.ok) {
         alert('Horario bloqueado exitosamente');
-        // Limpiar inputs
         setFecha('');
         setHora('');
       } else {
@@ -60,6 +58,74 @@ function configuracionAdmin() {
       alert('Error al conectar con el servidor');
     }
   };
+
+  // Estados para precios
+  const [servicioSeleccionado, setServicioSeleccionado] = useState('');
+  const [nuevoServicio, setNuevoServicio] = useState('');
+  const [agregando, setAgregando] = useState(false);
+  const [precio, setPrecio] = useState('');
+  const [servicios, setServicios] = useState([
+  { id: 1, nombre: 'Corte de barba' },
+  { id: 2, nombre: 'Corte de cabello' },
+  { id: 3, nombre: 'Peinado' },
+]);
+
+
+  const handleSelectChange = (e) => {
+    const valor = e.target.value;
+    setServicioSeleccionado(valor);
+    setAgregando(valor === '4'); // mostrar input solo si selecciona "Agregar servicio nuevo"
+  };
+
+  const guardarNuevoServicio = async () => {
+    if (!nuevoServicio.trim()) {
+      alert('Por favor, escribe un nombre para el nuevo servicio.');
+      return;
+    }
+
+    try {
+      const res = await fetch('https://barbertalk-back.onrender.com/informacioncitas/servicio', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ nombre_servicio: nuevoServicio })
+      });
+
+      if (res.ok) {
+        alert('✅ Nuevo servicio agregado correctamente');
+        setNuevoServicio('');
+        setAgregando(false);
+      } else {
+        const error = await res.json();
+        alert(`Error al guardar: ${error.message || 'Intenta de nuevo'}`);
+      }
+    } catch (err) {
+      console.error(err);
+      alert('Error al conectar con el servidor.');
+    }
+  };
+
+
+
+
+
+  useEffect(() => {
+  const cargarServicios = async () => {
+    try {
+      const res = await fetch('https://barbertalk-back.onrender.com/informacioncitas/servicios', { credentials: 'include' });
+      if (res.ok) {
+        const data = await res.json();
+        setServicios(data);
+      }
+    } catch (err) {
+      console.error('Error cargando servicios:', err);
+    }
+  };
+  cargarServicios();
+}, []);
+
+
+
+
 
   return (
     <div className='container-config-Admin'>
@@ -95,7 +161,7 @@ function configuracionAdmin() {
              className='dia-input-nohabil-CA'
              value={fecha}
              onChange={e => setFecha(e.target.value)}
-           ></input>
+           />
 
            <p className='horario-nohabil-CA'>Horario no habil:</p>
            <select 
@@ -134,27 +200,171 @@ function configuracionAdmin() {
            </button>
         </div>
 
-        <div className='parte2-cuadro-CA'>
-           <h3 className='titulo3-config-Admin'>Configuración de precios por cada servicio.</h3>
-           <p className='precio-pelo-CA'>Corte de pelo:</p>
-           <input type='number' className='input-corte-CA'></input>
+        
 
-           <p className='precio-barba-CA'>Corte de barba:</p>
-           <input type='number' className='input-barba-CA'></input>
 
-           <p className='precio-diseño-CA'>Diseño de barba:</p>
-           <input type='number' className='input-diseño-CA'></input>
 
-           <button className='boton-guardar-precio'>Aplicar cambios</button>
-        </div>
+       {/* --------------------------------------------------------------------------------------------- */}
+       {/* Esta seccion es la de configuracion de precios y añadir nuevo servicio */}
+<div className='parte2-cuadro-CA'>
+  <h3 className='titulo3-config-Admin'>Configuración de precios por cada servicio.</h3>
+  <p className='precio-pelo-CA'>Seleccione el servicio:</p>
 
-        <img className='imagen-config-Admin' alt='no aparece' src='/img/fondo-CA.jpg'></img>
-        <img className='relleno-config-Admin' alt='no aparece' src='/img/Relleno-CA.png'></img>
-        <hr className='linea-vertical-CA'></hr>
-     </div> {/* Este div es del cuadro-config-Admin */}
+  <select
+    className='input-corte-CA'
+    value={servicioSeleccionado}
+    onChange={(e) => {
+      const valor = e.target.value;
+      setServicioSeleccionado(valor);
+      setAgregando(valor === '4');
+    }}
+  >
+    
+    {servicios.map((s) => (
+      <option key={s.id} value={s.id}>{s.nombre}</option>
+    ))}
+    <option value="4">Agregar servicio nuevo</option>
+  </select>
 
+  {agregando && (
+    <div style={{ marginTop: '10px' }}>
+      <input
+        type='text'
+        className='input-corte-CA'
+        placeholder='Nombre del nuevo servicio'
+        value={nuevoServicio}
+        onChange={(e) => setNuevoServicio(e.target.value)}
+      />
+    </div>
+  )}
+
+  <p className='precio-barba-CA'>Nuevo precio:</p>
+  <input
+    type='number'
+    className='input-barba-CA'
+    value={precio}
+    onChange={(e) => setPrecio(e.target.value)}
+  />
+
+  <button
+    className='boton-guardar-precio'
+    onClick={async () => {
+      try {
+        let csrfToken = '';
+        try {
+          const csrfRes = await fetch('https://barbertalk-back.onrender.com/api/csrf-token', { credentials: 'include' });
+          if (csrfRes.ok) {
+            const csrfData = await csrfRes.json();
+            csrfToken = csrfData.csrfToken || '';
+          }
+        } catch {
+          console.log('No se pudo obtener CSRF token, continuando sin él');
+        }
+
+        let servicioIdParaPrecio = servicioSeleccionado;
+
+        // Agregar nuevo servicio si corresponde
+        if (agregando && nuevoServicio.trim()) {
+          if (!precio) {
+            alert('Ingresa un precio válido para el nuevo servicio');
+            return;
+          }
+
+          const resServicio = await fetch('https://barbertalk-back.onrender.com/informacioncitas/newservicio', {
+            method: 'POST',
+            headers: { 
+              'Content-Type': 'application/json',
+              ...(csrfToken && { 'CSRF-Token': csrfToken })
+            },
+            credentials: 'include',
+            body: JSON.stringify({
+              nombre: nuevoServicio,
+              precio: Number(precio),
+              duracion: "00:30:00"
+            })
+          });
+
+          if (!resServicio.ok) {
+            const error = await resServicio.json().catch(() => ({}));
+            alert(`Error al guardar el nuevo servicio: ${error.message || 'Intenta de nuevo'}`);
+            return;
+          }
+
+          // Recargar la lista completa de servicios
+          const resLista = await fetch('https://barbertalk-back.onrender.com/informacioncitas/servicios', { credentials: 'include' });
+          if (resLista.ok) {
+            const data = await resLista.json();
+            setServicios(data);
+            const ultimo = data[data.length - 1]; // selecciona el último agregado
+            setServicioSeleccionado(ultimo.id);
+          }
+
+          alert('✅ Nuevo servicio agregado correctamente');
+          setAgregando(false);
+          setNuevoServicio('');
+          setPrecio('');
+          return;
+        }
+
+        // Validaciones para actualizar precio
+        if (!servicioIdParaPrecio || servicioIdParaPrecio === '4') {
+          alert('Selecciona un servicio válido para asignarle precio');
+          return;
+        }
+        if (!precio) {
+          alert('Ingresa un precio válido');
+          return;
+        }
+
+        // Actualizar precio
+        const resPrecio = await fetch('https://barbertalk-back.onrender.com/informacioncitas/precio', {
+          method: 'PUT',
+          headers: { 
+            'Content-Type': 'application/json',
+            ...(csrfToken && { 'CSRF-Token': csrfToken })
+          },
+          credentials: 'include',
+          body: JSON.stringify({
+            id_servicio: servicioIdParaPrecio,
+            nuevo_precio: Number(precio)
+          })
+        });
+
+        if (!resPrecio.ok) {
+          const error = await resPrecio.json().catch(() => ({}));
+          alert(`Error al actualizar precio: ${error.message || 'Intenta de nuevo'}`);
+          return;
+        }
+
+        alert('💰 Precio actualizado correctamente');
+        setPrecio('');
+        setServicioSeleccionado('');
+
+      } catch (err) {
+        console.error('Error de conexión:', err);
+        alert('Error al conectar con el servidor');
+      }
+    }}
+  >
+    Aplicar cambios
+  </button>
+</div>
+
+
+
+
+
+
+
+
+        
+
+        <img className='imagen-config-Admin' alt='no aparece' src='/img/fondo-CA.jpg' />
+        <img className='relleno-config-Admin' alt='no aparece' src='/img/Relleno-CA.png' />
+        <hr className='linea-vertical-CA' />
+     </div> {/* cuadro-config-Admin */}
   </div>
-  )
+  );
 }
 
-export default configuracionAdmin;
+export default ConfiguracionAdmin;
