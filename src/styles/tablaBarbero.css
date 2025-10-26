@@ -28,7 +28,7 @@
 /* Esto acomodo el componente de BarraMini en la pantalla */
 .componente-BarraMini{
     margin-left: -95.5%;
-    margin-top: 13.1%;
+    margin-top: 35.1%;
 }
 
 .imagen-tablaTB{
@@ -114,4 +114,8 @@
     border: none;
     outline: none;
     transform: scale(1);
+}
+
+.btn-finalizar-cita:disabled {
+    opacity: .6; cursor: not-allowed;
 }
