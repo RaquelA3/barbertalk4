@@ -6,9 +6,7 @@ import BarraMini from '../components/BarraMini';
 function formatearFecha(iso) {
   try {
     return new Date(iso).toLocaleDateString('es-MX', {
-      day: '2-digit',
-      month: '2-digit',
-      year: 'numeric',
+      day: '2-digit', month: '2-digit', year: 'numeric',
     });
   } catch {
     return '—';
@@ -20,45 +18,21 @@ function formatearHora(horaHHMMSS) {
   const [h='00', m='00', s='00'] = horaHHMMSS.split(':');
   const d = new Date();
   d.setHours(parseInt(h, 10), parseInt(m, 10), parseInt(s, 10), 0);
-  return d.toLocaleTimeString('es-MX', {
-    hour: '2-digit',
-    minute: '2-digit',
-    hour12: true,
-  });
+  return d.toLocaleTimeString('es-MX', { hour: '2-digit', minute: '2-digit', hour12: true });
 }
 
-// --- Normaliza el estado a número, soportando variantes de texto del backend ---
 function estadoNormalizado(cita) {
   const raw = cita?.estado_cita;
-
-  // numérico o string numérico: "0","1","2"
   if (typeof raw === 'number') return raw;
   if (typeof raw === 'string') {
     const n = parseInt(raw.trim(), 10);
     if (!Number.isNaN(n)) return n;
   }
-
-  // texto: soportar "Cancelada", "Pendiente", "Finalizada", "Realizada", etc.
   const txt = (cita?.estado_cita_texto || '')
-    .toLowerCase()
-    .normalize('NFD').replace(/[\u0300-\u036f]/g, '');
-
-  // cancelada
+    .toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
   if (txt.includes('cancel')) return 0;
-
-  // finalizada / realizada / completada / terminada / hecha
-  if (
-    txt.includes('final') ||
-    txt.includes('realiz') ||    // "realizada"
-    txt.includes('complet') ||  // "completada"
-    txt.includes('termin') ||   // "terminada"
-    txt.includes('hecha')
-  ) return 2;
-
-  // pendiente
+  if (txt.includes('final') || txt.includes('realiz') || txt.includes('complet') || txt.includes('termin') || txt.includes('hecha')) return 2;
   if (txt.includes('pend')) return 1;
-
-  // por defecto: pendiente
   return 1;
 }
 
@@ -69,17 +43,18 @@ export default function TablaBarbero() {
   const [error, setError] = useState('');
   const [accionando, setAccionando] = useState(new Set());
 
-  const nombreBarbero = (() => {
-    try {
-      const t = JSON.parse(localStorage.getItem('trabajador'));
-      if (t?.nombre) return t.nombre;
-      const u = JSON.parse(localStorage.getItem('usuario'));
-      if (u?.nombre) return u.nombre;
-    } catch {}
-    return 'Tú';
-  })();
+  // ---- NUEVO: estado de modales ----
+  const [confirmModal, setConfirmModal] = useState({
+    open: false,
+    id_cita: null,
+    mensaje: '¿Finalizar esta cita? Esta acción marcará la cita como finalizada.'
+  });
+  const [successModal, setSuccessModal] = useState({
+    open: false,
+    linea1: '¡La cita ha sido marcada como realizada,',
+    linea2: 'con éxito!'
+  });
 
-  // 1) CSRF
   useEffect(() => {
     fetch('https://barbertalk-back.onrender.com/api/csrf-token', { credentials: 'include' })
       .then((r) => r.json())
@@ -90,7 +65,6 @@ export default function TablaBarbero() {
       });
   }, []);
 
-  // 2) Obtener citas
   useEffect(() => {
     if (!csrfToken) return;
     fetch('https://barbertalk-back.onrender.com/perfiltrabajador/citas-historial', {
@@ -111,12 +85,16 @@ export default function TablaBarbero() {
       .finally(() => setCargando(false));
   }, [csrfToken]);
 
-  async function finalizarCita(id_cita) {
+  // Abrir/cerrar modales
+  const abrirConfirm = (id_cita) => setConfirmModal((p) => ({ ...p, open: true, id_cita }));
+  const cerrarConfirm = () => setConfirmModal((p) => ({ ...p, open: false, id_cita: null }));
+  const abrirSuccess = () => setSuccessModal((p) => ({ ...p, open: true }));
+  const cerrarSuccess = () => setSuccessModal((p) => ({ ...p, open: false }));
+
+  // Acción real de finalizar (antes estaba dentro de window.confirm)
+  async function finalizarCitaAPI(id_cita) {
     const cita = citas.find(c => c.id_cita === id_cita);
     if (!cita || estadoNormalizado(cita) !== 1) return; // solo si está pendiente
-
-    const confirmar = window.confirm('¿Finalizar esta cita? Esta acción marcará la cita como finalizada.');
-    if (!confirmar) return;
 
     const enCurso = new Set(accionando);
     enCurso.add(id_cita);
@@ -146,8 +124,11 @@ export default function TablaBarbero() {
             : c
         )
       );
+
+      abrirSuccess();
     } catch (e) {
       console.error(e);
+      // Si quieres un modal de error, aquí puedes abrir otro.
       alert('No se pudo finalizar la cita. Intenta nuevamente.');
     } finally {
       const fin = new Set(accionando);
@@ -155,6 +136,13 @@ export default function TablaBarbero() {
       setAccionando(fin);
     }
   }
+
+  // Confirmar desde modal
+  const onConfirmarDesdeModal = () => {
+    const id = confirmModal.id_cita;
+    cerrarConfirm();
+    if (id != null) finalizarCitaAPI(id);
+  };
 
   return (
     <div className='container-Tabla-Barbero'>
@@ -177,7 +165,6 @@ export default function TablaBarbero() {
           <table className='tabla-citasTB'>
             <thead>
               <tr>
-                {/* Columna oculta: id_cita */}
                 <th style={{ display: 'none' }}>ID</th>
                 <th>Fecha</th>
                 <th>Hora</th>
@@ -205,9 +192,7 @@ export default function TablaBarbero() {
 
                 return (
                   <tr key={cita?.id_cita ?? `${cita.fecha_cita}-${cita.hora_cita}-${idx}`}>
-                    {/* Celda oculta: id_cita */}
                     <td style={{ display: 'none' }}>{cita?.id_cita ?? '—'}</td>
-
                     <td>{formatearFecha(cita.fecha_cita)}</td>
                     <td>{formatearHora(cita.hora_cita)}</td>
                     <td>{cita.cliente_nombre_completo || '—'}</td>
@@ -224,8 +209,8 @@ export default function TablaBarbero() {
                         className="btn-finalizar-cita"
                         disabled={enProceso || est !== 1}
                         onClick={() => {
-                          if (enProceso || est !== 1) return; // seguridad extra
-                          finalizarCita(cita.id_cita);
+                          if (enProceso || est !== 1) return;
+                          abrirConfirm(cita.id_cita);
                         }}
                         aria-disabled={enProceso || est !== 1}
                         title={est === 1 ? 'Marcar como finalizada' : 'Acción no disponible'}
@@ -241,6 +226,36 @@ export default function TablaBarbero() {
           </table>
         </div>
       </div>
+
+      {/* ===== Modal Confirmación ===== */}
+      {confirmModal.open && (
+        <div className="tbm-overlay" role="dialog" aria-modal="true" onClick={cerrarConfirm}>
+          <div className="tbm-card" onClick={(e) => e.stopPropagation()}>
+            <h2 className="tbm-title">{confirmModal.mensaje}</h2>
+            <div className="tbm-mustache">
+              <img src="/img/BBigote.png" alt="moustache" />
+            </div>
+            <div className="tbm-actions">
+              <button className="tbm-btn tbm-btn-danger" type="button" onClick={onConfirmarDesdeModal} autoFocus>Si</button>
+              <button className="tbm-btn tbm-btn-secondary" type="button" onClick={cerrarConfirm}>Cancelar</button>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* ===== Modal Éxito ===== */}
+      {successModal.open && (
+        <div className="tbm-overlay" role="dialog" aria-modal="true" onClick={cerrarSuccess}>
+          <div className="tbm-card" onClick={(e) => e.stopPropagation()}>
+            <h2 className="tbm-title">{successModal.linea1}</h2>
+            <div className="tbm-subtitle">{successModal.linea2}</div>
+            <div className="tbm-mustache">
+              <img src="/img/BBigote.png" alt="moustache" />
+            </div>
+            <button className="tbm-btn tbm-btn-primary" type="button" onClick={cerrarSuccess} autoFocus>Aceptar</button>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
