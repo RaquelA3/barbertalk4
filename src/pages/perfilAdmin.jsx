@@ -17,6 +17,19 @@ function PerfilAdmin() {
     segundo_apellido: ''
   });
 
+  // NEW: control del modal de éxito
+  const [showSuccess, setShowSuccess] = useState(false);
+
+  // Cerrar modal (clic en Aceptar o en overlay)
+  const closeModal = () => setShowSuccess(false);
+
+  // Cerrar con tecla ESC
+  useEffect(() => {
+    const onKey = (e) => { if (e.key === 'Escape') closeModal(); };
+    window.addEventListener('keydown', onKey);
+    return () => window.removeEventListener('keydown', onKey);
+  }, []);
+
   // Obtener CSRF token
   useEffect(() => {
     const fetchCsrf = async () => {
@@ -88,8 +101,10 @@ function PerfilAdmin() {
 
       const data = await res.json();
       if (res.ok) {
-        alert(data.mensaje || 'Datos actualizados con éxito');
+        // Mostrar modal de éxito en lugar de alert
+        setShowSuccess(true);
       } else {
+        // Si quieres un modal de error, se podría agregar otro estado.
         alert(data.mensaje || 'Error al actualizar los datos');
       }
     } catch (error) {
@@ -194,6 +209,40 @@ function PerfilAdmin() {
           />
         </div>
       </div>
+
+      {/* ---------- MODAL DE ÉXITO ----------- */}
+      {showSuccess && (
+        <div
+          className="mini-modal-overlay"
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="mini-modal-title"
+          onClick={closeModal}
+        >
+          <div
+            className="mini-modal-card"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <h2 id="mini-modal-title" className="mini-modal-title">
+              ¡Tus datos han sido actualizados
+            </h2>
+            <div className="mini-modal-subtitle">con éxito!</div>
+
+            <div className="mini-modal-mustache">
+              <img src="/img/BBigote.png" alt="moustache" />
+            </div>
+
+            <button
+              className="mini-modal-cta"
+              type="button"
+              onClick={closeModal}
+              autoFocus
+            >
+              Aceptar
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

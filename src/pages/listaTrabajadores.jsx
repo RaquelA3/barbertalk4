@@ -1,4 +1,4 @@
-import React, { useState, useEffect} from 'react';
+import React, { useState } from 'react';
 import MenuAdmin from '../components/MenuAdmin';
 import HeaderAdmin from '../components/HeaderAdmin';
 import styles from '../styles/listaTrabajadores.module.css';
@@ -7,16 +7,45 @@ import { useNavigate } from 'react-router-dom';
 function listaTrabajadores() {
   const navigate = useNavigate();
 
-  const trabajadores = [
+  // Lista en estado para poder eliminar visualmente
+  const [trabajadores, setTrabajadores] = useState([
     'Juan Jose Aguirre Barragan.',
     'Mario Jorge Saucedo Moralez.',
     'Pedro Castañeda Villa.',
     'Saul Carlos Vazquez Campo.',
     'Saul Carlos Vazquez Campo.'
-  ];
+  ]);
+
+  // --- Estado del modal de confirmación ---
+  const [confirmData, setConfirmData] = useState({
+    open: false,
+    index: null,
+    nombre: ''
+  });
+
+  // --- Estado del modal de éxito ---
+  const [showSuccess, setShowSuccess] = useState(false);
+
+  const openConfirm = (idx, nombre) => {
+    setConfirmData({ open: true, index: idx, nombre });
+  };
+
+  const closeConfirm = () => {
+    setConfirmData({ open: false, index: null, nombre: '' });
+  };
+
+  const closeSuccess = () => setShowSuccess(false);
+
+  // Simulación de eliminación (aquí podrías llamar a tu API DELETE)
+  const confirmarEliminacion = async () => {
+    // Si tuvieras una API, harías la petición aqui y, al resolver OK:
+    setTrabajadores(prev => prev.filter((_, i) => i !== confirmData.index));
+    closeConfirm();
+    setShowSuccess(true);
+  };
 
   return (
-     <div className={styles['container-lista-Trabajadores']}>
+    <div className={styles['container-lista-Trabajadores']}>
       {/* Cabecera */}
       <HeaderAdmin />
 
@@ -42,9 +71,9 @@ function listaTrabajadores() {
                   <button
                     type="button"
                     className={styles['boton-editar-datos']}
-                    onClick={() => navigate(`/admin/trabajadores/${idx + 1}/editar`)}
+                    onClick={() => openConfirm(idx, nombre)}
                   >
-                    Editar datos
+                    Eliminar
                   </button>
                 </li>
               ))}
@@ -74,8 +103,80 @@ function listaTrabajadores() {
           />
         </div>
       </div>
+
+      {/* ---------------- MODAL CONFIRMACIÓN ---------------- */}
+      {confirmData.open && (
+        <div
+          className="mini-modal-overlay"
+          role="dialog"
+          aria-modal="true"
+          onClick={closeConfirm}
+        >
+          <div
+            className="mini-modal-card"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <h2 className="mini-modal-title">
+              ¿Desea dar de baja/eliminar a este trabajador?
+            </h2>
+
+            <div className="mini-modal-mustache" style={{ marginTop: 6, marginBottom: 10 }}>
+              <img src="/img/BBigote.png" alt="moustache" />
+            </div>
+
+            <div className="mini-modal-actions">
+              <button
+                type="button"
+                className="mini-modal-cta mini-modal-cta--danger"
+                onClick={confirmarEliminacion}
+                autoFocus
+              >
+                Sí
+              </button>
+              <button
+                type="button"
+                className="mini-modal-cta mini-modal-cta--secondary"
+                onClick={closeConfirm}
+              >
+                Cancelar
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* ---------------- MODAL ÉXITO ---------------- */}
+      {showSuccess && (
+        <div
+          className="mini-modal-overlay"
+          role="dialog"
+          aria-modal="true"
+          onClick={closeSuccess}
+        >
+          <div
+            className="mini-modal-card"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <h2 className="mini-modal-title">¡Se ha eliminado a ese trabajador,</h2>
+            <div className="mini-modal-subtitle">con éxito!</div>
+
+            <div className="mini-modal-mustache">
+              <img src="/img/BBigote.png" alt="moustache" />
+            </div>
+
+            <button
+              className="mini-modal-cta"
+              type="button"
+              onClick={closeSuccess}
+              autoFocus
+            >
+              Aceptar
+            </button>
+          </div>
+        </div>
+      )}
     </div>
-  )
+  );
 }
 
 export default listaTrabajadores;

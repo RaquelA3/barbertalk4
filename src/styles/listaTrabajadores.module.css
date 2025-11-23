@@ -232,3 +232,98 @@
 .negro1-perfilU{ color: black; }
 .imagenTijeras-perfilU{ margin-left: 0%; margin-top: 0%; width: 5%; height: auto; }
 .separador-cabecera-formulario{ display: flex; }
+
+/* ===== Modal de confirmación pequeño ===== */
+.mini-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.mini-modal-card {
+  width: min(520px, 92vw);
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.25);
+  padding: 28px 28px 24px;
+  text-align: center;
+  border: 6px solid #b56816;
+}
+
+.mini-modal-title {
+  margin: 0;
+  font-size: 28px;
+  line-height: 1.2;
+  font-weight: 800;
+  color: #111111;
+}
+
+.mini-modal-subtitle {
+  margin-top: 8px;
+  font-size: 26px;
+  font-weight: 800;
+  color: #E0A64F;
+}
+
+.mini-modal-mustache {
+  margin: 14px 0 18px;
+}
+.mini-modal-mustache img {
+  display: inline-block;
+  height: 28px;
+  user-select: none;
+  pointer-events: none;
+}
+
+.mini-modal-cta {
+  display: inline-block;
+  width: 70%;
+  max-width: 360px;
+  padding: 14px 18px;
+  border: none;
+  border-radius: 12px;
+  font-size: 20px;
+  font-weight: 800;
+  background: #E0A64F;
+  color: #ffffff;
+  cursor: pointer;
+  transition: transform 0.05s ease, box-shadow 0.15s ease, background 0.15s ease;
+  box-shadow: 0 6px 0 #b8832c;
+}
+
+.mini-modal-cta:hover {
+  background: #d39535;
+}
+
+.mini-modal-cta:active {
+  transform: translateY(1px);
+  box-shadow: 0 4px 0 #b8832c;
+}
+
+/* Contenedor de acciones para el modal de confirmación */
+.mini-modal-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  margin-top: 6px;
+}
+
+/* Botón rojo (Sí) */
+.mini-modal-cta--danger {
+  background: #d62828;
+  box-shadow: 0 6px 0 #a61e1e;
+}
+.mini-modal-cta--danger:hover { background: #c31f1f; }
+.mini-modal-cta--danger:active { transform: translateY(1px); box-shadow: 0 4px 0 #a61e1e; }
+
+/* Botón gris (Cancelar) */
+.mini-modal-cta--secondary {
+  background: #6b7280;
+  box-shadow: 0 6px 0 #525761;
+}
+.mini-modal-cta--secondary:hover { background: #5f6673; }
+.mini-modal-cta--secondary:active { transform: translateY(1px); box-shadow: 0 4px 0 #525761; }

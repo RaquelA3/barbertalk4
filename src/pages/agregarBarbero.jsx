@@ -3,7 +3,6 @@ import MenuAdmin from '../components/MenuAdmin';
 import HeaderAdmin from '../components/HeaderAdmin';
 import '../styles/agregarBarbero.css';
 import { useNavigate } from 'react-router-dom';
-import { Eye, EyeOff } from "lucide-react";
 
 function AgregarBarbero() {
   const navigate = useNavigate();
@@ -20,17 +19,20 @@ function AgregarBarbero() {
   const [contrasena2, setContrasena2] = useState('');
   const [tipo, setTipo] = useState('0'); // 0 = Barbero, 1 = Admin
 
+  // Estado del modal de éxito
+  const [showSuccess, setShowSuccess] = useState(false);
+
+  const closeModal = () => setShowSuccess(false);
+
   // Función para enviar el formulario
   const handleAgregar = async () => {
     try {
-      // 1. Obtener CSRF token
       const csrfRes = await fetch('https://barbertalk-back.onrender.com/api/csrf-token', {
-        credentials: 'include' // importante
+        credentials: 'include'
       });
       const csrfData = await csrfRes.json();
       const csrfToken = csrfData.csrfToken;
 
-      // 2. Enviar petición POST con datos
       const res = await fetch('https://barbertalk-back.onrender.com/registrotrabajador', {
         method: 'POST',
         credentials: 'include',
@@ -55,8 +57,8 @@ function AgregarBarbero() {
       const data = await res.json();
 
       if (res.ok) {
-        alert('Registro exitoso. ID trabajador: ' + data.id_trabajador);
-        navigate('/listaTrabajadores'); // redirige si quieres
+        // Mostrar ventana emergente en lugar de alert
+        setShowSuccess(true);
       } else {
         alert('Error: ' + (data.mensaje || data.error));
       }
@@ -74,7 +76,8 @@ function AgregarBarbero() {
       <div className='general-agregar-Admin'>
         <img className='logo-agregar-Admin' alt='logo' src='/img/AgregarB.png'></img>
         <h1 className='titulo1-agregar-Admin'>
-          <span className='negro-agregar-Admin'>Añadir nuevo</span> <span className='amarillo-agregar-Admin'>barbero</span>
+          <span className='negro-agregar-Admin'>Añadir nuevo</span>{' '}
+          <span className='amarillo-agregar-Admin'>barbero</span>
         </h1>
         <img className='bigote-agregar-Admin' alt='bigote' src='/img/BBigote.png'></img>
       </div>
@@ -114,7 +117,6 @@ function AgregarBarbero() {
           <div className="campo-AA">
             <p>Contraseña:</p>
             <input type={mostrar ? 'text' : 'password'} className='input-AA' value={contrasena} onChange={e => setContrasena(e.target.value)} />
-            
           </div>
 
           <div className="campo-AA">
@@ -133,12 +135,45 @@ function AgregarBarbero() {
           </div>
 
           <div className="campo-AA">
-            <button className='boton-agregar-barbero' onClick={handleAgregar}>Añadir barbero</button>
+            <button className='boton-agregar-barbero' onClick={handleAgregar}>
+              Añadir barbero
+            </button>
           </div>
 
           <img className='fondo-agregar-Admin' alt='fondo' src='/img/Fondo-AA.png' />
         </div>
       </div>
+
+      {/* ---------- MODAL DE ÉXITO ----------- */}
+      {showSuccess && (
+        <div
+          className="mini-modal-overlay"
+          role="dialog"
+          aria-modal="true"
+          onClick={closeModal}
+        >
+          <div
+            className="mini-modal-card"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <h2 className="mini-modal-title">¡Se añadió al nuevo trabajador,</h2>
+            <div className="mini-modal-subtitle">con éxito!</div>
+
+            <div className="mini-modal-mustache">
+              <img src="/img/BBigote.png" alt="moustache" />
+            </div>
+
+            <button
+              className="mini-modal-cta"
+              type="button"
+              onClick={closeModal}
+              autoFocus
+            >
+              Aceptar
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
