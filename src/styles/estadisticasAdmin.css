@@ -1,61 +1,328 @@
-/* Estos links son para obtener el tipo de letra de Roboto y Saira de los titulos */
+/* src/styles/estadisticasAdmin.css */
+
+/* Tipografías (mismas que otras pantallas del admin) */
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;500;600;700;800;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Saira+Extra+Condensed&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Saira+Extra+Condensed:wght@400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Saira+Semi+Condensed:wght@500;600;700;800&display=swap');
 
-.container-estadisticas-Admin{
-    background-color: #EDE7E5;
-    background-size: cover;
-    background-position: center 25%;
-    color: black;
-    position: relative;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    width: 100vw;
-    height: 100vh;
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
+:root {
+  --color-fondo-dashboard: #5b2a1c;
+  --color-borde-dashboard: #986315;
+  --color-beige-fondo: #ede7e5;
+  --color-blanco: #ffffff;
+  --color-texto-principal: #2c1a12;
+  --color-acento: #e6a749;
+  --color-acento-oscuro: #c1562b;
 }
 
-.acomodo-estadisticas-Admin{
-    position: relative;
-    margin-top: 6%;
+/* CONTENEDOR GENERAL */
+
+.container-estadisticas-Admin {
+  background-color: var(--color-beige-fondo);
+  background-size: cover;
+  background-position: center 25%;
+  color: black;
+  position: relative;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
 }
 
-.logo-e-Admin{
-    width: 2.5%;
-    height: auto;
-    position: absolute;
-    left: 48.5%;
-    top: 13%;
+.acomodo-estadisticas-Admin {
+  position: relative;
+  margin-top: 6%;
 }
 
-.titulo1-estadisticas-Admin{
-    width: 100%;
-    font-family: 'Saira Extra Condensed';
-    font-weight: 700;
-    font-size: 35px;
-    position: absolute;
-    top: 9.5%;
-    left: 14%;
-    color: black;
+/* TÍTULO PRINCIPAL */
+
+.general-estadisticasAdmin {
+  position: relative;
 }
 
-.negro-estadisticas-Admin{
-    color: black;
+.logo-e-Admin {
+  width: 2.8%;
+  height: auto;
+  position: absolute;
+  left: 48%;
+  top: 13%;
 }
 
-.amarillo-estadisticas-Admin{
-    color: #986315;
+.titulo1-estadisticas-Admin {
+  width: 100%;
+  font-family: 'Saira Extra Condensed';
+  font-weight: 700;
+  font-size: 35px;
+  position: absolute;
+  top: 9.5%;
+  left: 15%;
+  color: black;
 }
 
-.bigote-estadisticas-Admin{
-    width: 200px;
-    height: auto;
-    position: absolute;
-    top: 17%;
-    left: 55%;
+.negro-estadisticas-Admin {
+  color: black;
+}
+
+.amarillo-estadisticas-Admin {
+  color: #986315;
+}
+
+.bigote-estadisticas-Admin {
+  width: 200px;
+  height: auto;
+  position: absolute;
+  top: 17%;
+  left: 55%;
+}
+
+/* CUADRO PRINCIPAL DEL DASHBOARD */
+
+.dashboard-contenedor-Admin {
+  width: 71.5%;
+  max-width: 2000px;
+  background-color: var(--color-fondo-dashboard);
+  border-radius: 16px;
+  padding: 32px 40px 36px 40px;
+  margin-top: 11%;
+  margin-left: 25%;
+  margin-right: auto;
+  box-sizing: border-box;
+  color: var(--color-blanco);
+  border: 3.5px solid var(--color-borde-dashboard);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.25);
+}
+
+/* FILA SUPERIOR */
+
+.dashboard-fila-superior-Admin {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  margin-bottom: 30px;
+}
+
+.metricas-caja-Admin {
+  font-family: 'Roboto';
+}
+
+.metricas-etiqueta-Admin {
+  font-family: 'Saira Extra Condensed';
+  font-size: 16px;
+  margin: 0 0 6px 0;
+}
+
+.metricas-valor-caja-Admin {
+  background-color: #fdf7f4;
+  border-radius: 14px;
+  padding: 16px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.metricas-valor-Admin {
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--color-texto-principal);
+}
+
+/* FILA INFERIOR */
+
+.dashboard-fila-inferior-Admin {
+  display: flex;
+  gap: 22px;
+}
+
+/* Columna izquierda */
+
+.dashboard-columna-izquierda-Admin {
+  flex: 1.4;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.tarjeta-citas-Admin,
+.tarjeta-servicios-Admin {
+  background-color: #fdf7f4;
+  border-radius: 16px;
+  padding: 18px 20px 20px 20px;
+  color: var(--color-texto-principal);
+  font-family: 'Roboto';
+}
+
+/* Títulos de las tarjetas */
+
+.tarjeta-titulo-Admin {
+  color: black;
+  font-family: 'Saira Extra Condensed';
+  font-size: 15px;
+  font-weight: 700;
+  margin: 0 0 12px 0;
+}
+
+/* Citas completadas vs canceladas */
+
+.tarjeta-leyenda-Admin {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: 14px;
+  font-size: 13px;
+}
+
+.tarjeta-leyenda-item-Admin {
+  font-family: 'Saira Extra Condensed';
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.punto-completadas-Admin,
+.punto-canceladas-Admin {
+  width: 10px;
+  height: 10px;
+  border-radius: 3px;
+  display: inline-block;
+}
+
+/* Barra de progreso */
+
+.barra-progreso-contenedor-Admin {
+  position: relative;
+  background-color: #e9dfda;
+  border-radius: 999px;
+  height: 18px;
+  overflow: hidden;
+}
+
+.barra-progreso-completadas-Admin {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 92%;
+  background-color: var(--color-acento-oscuro);
+}
+
+.barra-progreso-canceladas-Admin {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 8%;
+  background-color: #b4351e;
+}
+
+.barra-progreso-etiquetas-Admin {
+  margin-top: 6px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 11px;
+}
+
+/* Servicios más solicitados */
+
+.lista-servicios-Admin {
+  font-family: 'Saira Extra Condensed';
+  margin: 4px 0 0 18px;
+  padding: 0;
+  font-size: 14px;
+}
+
+/* Columna derecha - gráfica */
+
+.dashboard-columna-derecha-Admin {
+  flex: 1;
+}
+
+.tarjeta-grafica-Admin {
+  background-color: #fdf7f4;
+  border-radius: 16px;
+  padding: 18px 20px 22px 20px;
+  color: var(--color-texto-principal);
+  font-family: 'Roboto';
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.grafica-titulo-Admin {
+  margin-bottom: 10px;
+}
+
+.grafica-contenido-Admin {
+  position: relative;
+  background-color: #fbf2ee;
+  border-radius: 14px;
+  padding: 16px 30px 26px 38px;
+  overflow: hidden;
+}
+
+.grafica-eje-y-Admin {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  font-size: 11px;
+  transform: rotate(-90deg);
+  transform-origin: left top;
+}
+
+/* SVG de la gráfica */
+
+.grafica-svg-Admin {
+  width: 100%;
+  height: 150px;
+}
+
+.grafica-grid-Admin {
+  stroke: #e2d3cb;
+  stroke-width: 0.4;
+}
+
+.grafica-linea-Admin {
+  stroke: #c84526;
+  stroke-width: 1.6;
+}
+
+/* Meses en la parte inferior */
+
+.grafica-meses-Admin {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 6px;
+  font-size: 11px;
+}
+
+/* RESPONSIVE BÁSICO */
+
+@media (max-width: 1400px) {
+  .dashboard-contenedor-Admin {
+    margin-top: 16%;
+  }
+
+  .dashboard-fila-superior-Admin {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .dashboard-fila-inferior-Admin {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 1024px) {
+  .dashboard-contenedor-Admin {
+    width: 70%;
+    margin-left: 27%;
+    padding: 26px 26px 30px 26px;
+  }
+
+  .dashboard-fila-superior-Admin {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
