@@ -107,7 +107,7 @@ function IniciosesionBarbero() {
         <form onSubmit={handleSubmit}>
           <div className="grid-formulario-SB">
             <div className="campo-formulario-SB">
-              <label htmlFor="usuario">Nombre de usuario o correo:</label>
+              <labe3l htmlFor="usuario">Nombre de usuario o correo:</labe3l>
               <input
                 type="text"
                 id="usuario"

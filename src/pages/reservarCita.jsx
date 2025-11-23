@@ -99,7 +99,7 @@ function ReservarCita() {
       .then(res => res.json())
       .then(data => {
         alert(data.mensaje);
-        if (data.resultado) navigate('registro');
+        if (data.resultado) navigate('/tablaUsuario');
       })
       .catch(err => {
         console.error('Error al agendar cita:', err);
