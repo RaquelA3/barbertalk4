@@ -7,36 +7,33 @@
 
 /* Esto es todo el estilo de la pantalla de tablaBarbero */
 .container-Tabla-Barbero{
-    background-color: #EDE7E5;
-    background-size: cover;
-    background-position: center 25%; 
-    color: black;
-    position: relative;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+       background-color: #EDE7E5;
     width: 100vw;
     height: 100vh;
     margin: 0;
     padding: 0;
-    overflow-x: hidden;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;    
+    align-items: center;
+    overflow-x: hidden;  
 }
 
 /* Esto acomodo el componente de BarraMini en la pantalla */
 .componente-BarraMini{
-    margin-left: -95.5%;
-    margin-top: 35.1%;
+    align-self: flex-start;
+    margin-left: -3px;
+    margin-top: 23px;
+     position: sticky;
+    top: 0;
+    z-index: 999;
 }
 
 .imagen-tablaTB{
     width: 5%;
     height: auto;
     position: relative;
-    top: -570px;
-    margin-left: 34.5%; 
+    margin-left: 31.5%; 
+    top: -560px;
 }
 
 .Titulo-tablaTB{
@@ -44,7 +41,7 @@
     font-weight: 800;
     position: absolute; 
     top: 10%;
-    left: 46%;
+    left: 45%;
     font-size: 35px;
 }
 
@@ -60,8 +57,8 @@
     width: 196px;
     height: auto;
     position: relative;
-    top: -555px;
-    left: -0.1%;
+    margin-left: 0%; 
+    top: -535px;
 }
 
 
@@ -71,11 +68,10 @@
 /* --------------------------------------------------------- */
 /* Esta parte es solo del diseño de la tabla */
 .contenedor-tabla-citasTB{
-    width: 125%;
+    width: 145%;
+    margin-top: -530px; 
     overflow-x: auto;
-    margin-left: -9%;
-    position: relative;
-    top: -550px;
+    margin-left: -168px;
 }
 
 .tabla-citasTB{
