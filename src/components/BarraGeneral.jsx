@@ -38,9 +38,8 @@ function BarraGeneral() {
   return (
     <div className='barra-lateral-BB'>
       <img className='usuario-barbero-BB' alt='no aparece' src='/img/Datos-perfilU.png' />
-      <h1 className='titulo1-BB'>Barbero:</h1>
       <h2 className='nombre-barbero-BB'>
-        <span className='negro1-BB'>Juan</span> <span className='amarillo1-BB'>Ramirez</span>
+        <span className='negro1-BB'>Barbero</span>
       </h2>
       <img className='bigote-principalBB' alt='no aparece' src='/img/BBigote.png' />
 

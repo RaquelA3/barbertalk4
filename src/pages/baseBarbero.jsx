@@ -24,7 +24,7 @@ function baseBarbero() {
          <h4 className='frase-BB'>Un buen estilo, comienza con un buen barbero.</h4>
 
          <img className='revisa-BB' alt='no aparece' src='/img/general-BB.png'></img>
-         <h5 className='mensaje-BB'>Revisa tu citas de hoy para comezar a trabajar.</h5>
+         <h5 className='mensaje-BB'>Revisa tu citas de hoy para comenzar a trabajar.</h5>
          <button className='btn-revisa-BB' onClick={() => navigate('/tablaBarbero')}>Revisar agenda</button>
        </div> 
 
